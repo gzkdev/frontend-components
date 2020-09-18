@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social notifications</title>
+    <!-- document styles -->
+    <style>
+        @font-face {
+            font-family: Nunito;
+            src: url(assets/fonts/Nunito-Regular.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            font-size: 1rem;
+            font-family: Nunito,sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+        .notification__bar{
+            /* width: 25rem; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            box-shadow: 0 0 1.5rem rgba(0,0,0,0.15),
+                        inset 0 0 1rem rgba(0,0,0,0.15);
+            background-color: #fff;
+            border-radius: 0.5rem;
+        }
+        .notification__item{
+            width: 5rem;
+            height: 5rem;
+            padding: 1rem;
+            box-shadow: 0 0 1.5rem rgba(0,0,0,0.15),
+                        inset 0 0 0.4rem rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem;
+            border-radius: 0.5rem;
+            transition: 400ms;
+            backface-visibility: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .notification__item:hover{
+            transform: scale(0.95);
+        }
+        .notification__icon{
+            font-size: 3rem;
+            color: #03a;
+        }
+        .telegram,.twitter{
+            color: rgb(20, 187, 243);
+        }
+        .dribbble{
+            color: #dd0077;
+        }
+        .notification__count{
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 0, 0, 0.623);
+            color: #fff;
+            padding: 1.13rem;
+            border-radius: 50%;
+            top: -1rem;
+            right: -1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification__bar">
+        <span class="notification__item"><span class="notification__count">3</span><span class="fab fa-behance notification__icon behance"></span></span>
+        <span class="notification__item"><span class="notification__count">96</span><span class="fab fa-telegram notification__icon telegram"></span></span>
+        <span class="notification__item"><span class="notification__count">61</span><span class="fab fa-dribbble notification__icon dribbble"></span></span>
+        <span class="notification__item"><span class="notification__count">20</span><span class="fab fa-twitter notification__icon twitter"></span></span>
+    </div>
+    <!-- svg icons javascript -->
+    <script src="js/all.js"></script>
+</body>
+</html>
