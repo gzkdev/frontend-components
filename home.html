@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        @font-face {
+            font-family: Nunito;
+            src: url(assets/fonts/Nunito-Regular.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 120vh;
+            font-size: 1rem;
+            line-height: 1.25;
+            font-family: Nunito, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #f3f4f5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 110rem;
+            margin: 0 auto;
+        }
+
+        section {
+            width: 100%;
+            display: block;
+        }
+
+        .home {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            transition: 0.6s;
+            width: 100%;
+            box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+            padding: 2rem 1rem;
+        }
+
+        header.sticky {
+            padding: 1rem 0;
+            background: #fff;
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 5rem;
+            display: block;
+        }
+
+        .logo__image {
+            width: 100%;
+        }
+
+        .nav {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            /* border: 2px solid blue; */
+        }
+
+        .nav__list {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            /* border: 2px solid blue; */
+        }
+
+        .nav__item {
+            margin: 0 2rem;
+        }
+
+        .nav__link {
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: #586069;
+            padding: 0.5rem;
+            transition: 0.4s ease;
+        }
+
+        .nav__link:hover {
+            border-bottom: 2px solid currentColor;
+        }
+
+        .main_home {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            z-index: -10;
+        }
+
+        .main_text {
+            width: 100%;
+            max-width: 50rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem;
+        }
+
+        .main_heading {
+            font-size: 6rem;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* margin: 0 0 2rem 0; */
+        }
+
+        .sub_heading {
+            font-size: 3rem;
+            margin: 0 0 2rem 0;
+            color: #586069;
+        }
+
+        .main_paragraph {
+            font-size: 1.6rem;
+            color: #586069;
+            margin: 0 0 2rem 0;
+        }
+
+        .main_button {
+            font-size: 1.6rem;
+            background-color: pink;
+            color: #586069;
+            border-radius: 100vh;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .whatid_container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .section_heading{
+            text-align-last: center;
+            margin: 3rem;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .whatid_card{
+            margin: 0 auto;
+            min-height: 30rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+        }
+        .whatid_icon{
+            font-size: 2rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #5112ef;
+            color: #fff;
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            display: grid;
+            place-items: center;
+        }
+        .whatid_heading{
+            font-size: 2rem;
+            margin: 0 0 2rem 0;
+        }
+        .whatid_paragraph{
+            font-size: 1.6rem;
+            color: #586069;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="home">
+        <header class="header">
+            <div class="header__container container">
+                <div class="logo">
+                    <img src="assets/img/tempo_64.png" alt="logo" class="logo__image">
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="main_home">
+            <div class="container">
+                <div class="main_text">
+                    <h1 class="main_heading">Hi, I'm Bobby</h1>
+                    <span class="sub_heading">Front end developer / Pharmacist</span>
+                    <p class="main_paragraph">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis necessitatibus repellat
+                        suscipit nostrum ex nulla nobis, pariatur non fuga a.
+                    </p>
+                    <a href="#" class="main_button">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whatid">
+        <div class="container">
+            <h2 class="section_heading">What I do</h2>
+            <div class="whatid_container">
+                <div class="whatid_card">
+                    <span class="whatid_icon"><i class="fas fa-bezier-curve"></i></span>
+                    <h3 class="whatid_heading">Design</h3>
+                    <p class="whatid_paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore qui, quia beatae
+                        libero?
+                    </p>
+                </div>
+
+                <div class="whatid_card">
+                    <span class="whatid_icon"><i class="fas fa-laptop"></i></span>
+                    <h3 class="whatid_heading">Development</h3>
+                    <p class="whatid_paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore qui, quia beatae
+                        libero?
+                    </p>
+                </div>
+
+                <div class="whatid_card">
+                    <span class="whatid_icon"><i class="fas fa-rocket"></i></span>
+                    <h3 class="whatid_heading">Engagement</h3>
+                    <p class="whatid_paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis nihil dolore qui, quia beatae
+                        libero?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- javascripts -->
+    <script src="js/all.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            var header = document.querySelector('.header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+    </script>
+</body>
+
+</html>
