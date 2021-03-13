@@ -1,0 +1,152 @@
+@font-face {
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+  font-family: Poppins;
+  font-weight: bold;
+}
+@font-face {
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Poppins;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: rgb(0, 153, 255);
+  --color2: rgb(255, 255, 255);
+  --color3: rgb(242, 242, 242);
+  --color4: rgb(0, 31, 51);
+  --color5: rgba(0, 31, 51, 0.04);
+  --max-width: 1140px;
+  --font-size-sm: 12px;
+  --font-size-nm: 14px;
+  --font-size-md: 24px;
+  --font-size-xmd: 32px;
+  --font-size-xxmd: 40px;
+  --font-size-lg: 48px;
+  --font-size-xlg: 56px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 16px;
+  --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color4);
+  /* background: var(--color3); */
+  background: linear-gradient(to bottom, #33ccff 10%, #fff 60%);
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Utility classes */
+.ctn {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.p-sm {
+  padding: 4px;
+}
+.m-sm {
+  margin: 12px auto;
+}
+
+.center-txt {
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-ctn {
+  position: relative;
+  width: 90vmin;
+  max-width: 480px;
+  min-height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-sm);
+}
+
+.card-box1 {
+  width: 100%;
+  max-width: 300px;
+  height: 240px;
+  background: var(--color2);
+  padding: 12px;
+  margin: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.sm {
+  background: none;
+  border-radius: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-nav {
+  width: 90%;
+  max-width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px auto 0;
+}
+
+.card-link {
+  display: inline-block;
+  color: var(--color4);
+}
+
+.card-btn {
+  width: 80%;
+  height: 48px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+  border: 2px solid var(--color4);
+  border-radius: var(--border-radius-sm);
+  transition: 200ms;
+}
+.card-btn:hover {
+  background: var(--color4);
+  color: var(--color2);
+}

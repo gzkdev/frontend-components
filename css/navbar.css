@@ -1,0 +1,156 @@
+/* Global variables */
+:root {
+  --color1: #f2a74b;
+  --color2: #fff;
+  --color3: #000;
+  --color4: #f2f2f2;
+  --color5: #222;
+  --font-size-sm: 12px;
+  --font-size-nm: 14px;
+  --font-size-md: 24px;
+  --font-size-xmd: 32px;
+  --font-size-lg: 48px;
+  --max-width: 1140px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 16px;
+  --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Poppins;
+  font-weight: normal;
+}
+@font-face {
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+  font-family: Poppins;
+  font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--color4);
+  font-family: Poppins, sans-serif;
+  font-weight: normal;
+  color: #222;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctn {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: var(--color2);
+  box-shadow: var(--box-shadow-sm);
+  z-index: 1000;
+}
+
+.header-ctn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-box,
+.header-menu {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: var(--color1); */
+  cursor: pointer;
+}
+
+.logo-box {
+  width: 120px;
+}
+
+.logo::before {
+  content: "Ball";
+  color: var(--color1);
+  border-radius: 100vh;
+}
+
+.header-nav {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  background: var(--color2);
+  padding: 10px;
+  transform: translateX(-300px);
+  transition: 320ms;
+}
+.open {
+  transform: translateX(0);
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-nav-link {
+  display: inline-block;
+  padding: 16px 14px;
+  color: var(--color5);
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  transition: 320ms;
+}
+.header-nav-link:hover {
+  color: var(--color1);
+}
+
+@media (min-width: 688px) {
+  .header-menu {
+    display: none;
+  }
+  .header-nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    transform: translate(0);
+    transition: 0;
+  }
+  .header-nav ul {
+    flex-direction: row;
+  }
+  .header-nav-link {
+    padding: 0 14px;
+    font-size: 1rem;
+  }
+}

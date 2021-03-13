@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        color: #555;
+        font-weight: 400;
+      }
+
+      .pSection {
+        position: relative;
+        padding-top: 200px;
+        padding-bottom: 300px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1070px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .pContent {
+        width: 65%;
+        background-color: rgba(78, 152, 21, 0.8);
+        color: white;
+        padding: 40px 60px;
+      }
+
+      .pImage {
+        width: 700px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <body>
+    <h1 class="header-section">Scroll down to see some parallax effects</h1>
+
+    <section class="pSection">
+      <div class="container">
+        <div class="pContent">
+          <p>
+            This is a super simple example of how to create a basic parallax
+            effect using GSAP's ScrollTrigger!
+          </p>
+          <p>
+            For more information about ScrollTrigger, check out
+            <a href="https://greensock.com" target="_blank"
+              >the GreenSock website.</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="pImage"
+        src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+        alt="Filler image"
+      />
+    </section>
+
+    <section class="pSection">
+      <div class="container">
+        <div class="pContent">
+          <p>
+            This is a super simple example of how to create a basic parallax
+            effect using GSAP's ScrollTrigger!
+          </p>
+          <p>
+            For more information about ScrollTrigger, check out
+            <a href="https://greensock.com" target="_blank"
+              >the GreenSock website.</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="pImage"
+        src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+        alt="Filler image"
+      />
+    </section>
+    <!-- <script src="js/ScrollMagic.min.js"></script> -->
+    <script>
+      gsap.registerPlugin(scrollTrigger);
+      gsap.to(".pContent", {
+        yPercent: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".pSection",
+          // start: "top bottom", // the default values
+          // end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      gsap.to(".pImage", {
+        yPercent: 50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".pSection",
+          // start: "top bottom", // the default values
+          // end: "bottom top",
+          scrub: true,
+        },
+      });
+    </script>
+  </body>
+</html>

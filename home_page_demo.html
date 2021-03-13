@@ -1,109 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home</title>
     <style>
-        @font-face {
-            font-family: Nunito;
-            src: url(assets/fonts/Nunito-Regular.ttf);
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 62.5%;
-            scroll-behavior: smooth;
-        }
-        body{
-            width: 100%;
-            min-height: 150vh;
-            font-size: 1rem;
-            font-family: Nunito,sans-serif;
-            display: flex;
-            flex-direction: column;
-            background: #000;
-        }
-        header{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 3rem 10rem;
-            z-index: 10000;
-            background: #000;
-            transition: 0.6s;
-        }
-        header.sticky{
-            padding: 2rem 10rem;
-            background: #fff;
-        }
-        header .logo{
-            position: relative;
-            font-weight: 700;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-decoration: none;
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            transition: 0.6s;
-            color: #fff;
-        }
-        header.sticky .logo,
-        header.sticky ul li a{
-            color: #000;
-        }
-        header ul{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-        }
-        header ul li{
-            position: relative;
-        }
-        header ul li a{
-            position: relative;
-            margin: 0 1.5rem;
-            text-decoration: none;
-            color: #fff;
-            letter-spacing: 0.2rem;
-            font-size: 1.6rem;
-            transition: 0.5s;
-        }
+      @font-face {
+        font-family: Nunito;
+        src: url(assets/fonts/Nunito-Regular.ttf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        min-height: 150vh;
+        font-size: 1rem;
+        font-family: Nunito, sans-serif;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 10rem;
+        z-index: 10000;
+        background: #000;
+        transition: 0.6s;
+      }
+      header.sticky {
+        padding: 2rem 10rem;
+        background: #fff;
+      }
+      header .logo {
+        position: relative;
+        font-weight: 700;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        transition: 0.6s;
+        color: #fff;
+      }
+      header.sticky .logo,
+      header.sticky ul li a {
+        color: #000;
+      }
+      header ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      header ul li {
+        position: relative;
+      }
+      header ul li a {
+        position: relative;
+        margin: 0 1.5rem;
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 0.2rem;
+        font-size: 1.6rem;
+        transition: 0.5s;
+      }
 
-        section{
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            background: #fff;
-        }
+      section {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: #fff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </header>
-    <section>
-    </section>
+    <section></section>
     <script>
-        window.addEventListener('scroll', ()=>{
-            var header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        })
+      window.addEventListener("scroll", () => {
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
     </script>
-</body>
+  </body>
 </html>

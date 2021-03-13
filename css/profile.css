@@ -1,0 +1,136 @@
+@font-face {
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Poppins;
+  font-weight: normal;
+}
+@font-face {
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+  font-family: Poppins;
+  font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #f2a74b;
+  --color2: #fff;
+  --color3: #000;
+  --color4: #f2f2f2;
+  --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--color4);
+  font-family: Poppins, sans-serif;
+  font-weight: normal;
+  color: #3d3d3d;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 95%;
+  max-width: 320px;
+  height: 100px;
+  border-radius: 16px;
+  background: var(--color2);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background: var(--color1);
+  border-radius: 16px 16px 0 0;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: var(--color2);
+  border-radius: 0 0 16px 16px;
+}
+
+.img-box {
+  position: absolute;
+  top: -32px;
+  left: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 100vh;
+  background: var(--color2);
+  border: 3.2px solid var(--color1);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.card-header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4px 0 0 96px;
+  margin: 0 0 0 100px;
+}
+
+.card-header span {
+  font-size: 12px;
+  margin: 0;
+  color: #999;
+}
+
+.message-icon {
+  position: absolute;
+  display: inline-block;
+  top: 8px;
+  right: 16px;
+  font-size: 16px;
+  color: var(--color1);
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.card:hover .message-icon {
+  transform: scaleX(1.2);
+}
+
+.content {
+  line-height: 1.5;
+  font-size: 12px;
+  padding: 16px 24px;
+}

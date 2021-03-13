@@ -1,0 +1,73 @@
+@font-face {
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Poppins;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #f2a74b;
+  --color2: #fff;
+  --color3: #000;
+  --color4: #f2f2f2;
+  --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--color4);
+  font-family: Poppins, sans-serif;
+  color: #3d3d3d;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 95%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
+  background-color: var(--color2);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 8px;
+  margin: 8px;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  /* border: 1px solid #ccc; */
+  overflow: hidden;
+  border-radius: 8px;
+}
