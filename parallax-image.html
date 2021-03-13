@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        src: url(css/fonts/Poppins/Poppins-Regular.ttf);
+        font-family: Poppins;
+        font-weight: normal;
+      }
+      @font-face {
+        src: url(css/fonts/Poppins/Poppins-Bold.ttf);
+        font-family: Poppins;
+        font-weight: bold;
+      }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-size: 18px;
+        font-family: Poppins, sans-serif;
+        font-weight: normal;
+        line-height: 1.5;
+      }
+      .zoom {
+        width: 100%;
+        height: 800px;
+        position: relative;
+        overflow: hidden;
+        background: url(css/img/gaetan-othenin-girard-WwKKQee7wrA-unsplash.jpg)
+          center no-repeat;
+        background-size: cover;
+      }
+
+      .zoom::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background: #fff;
+        background: linear-gradient(transparent, #fff);
+      }
+      .layer1 {
+        position: absolute;
+        left: 40;
+        width: 100%;
+        transform: translateX(-50px);
+        z-index: 10;
+      }
+      .layer2 {
+        z-index: 1000;
+      }
+      .layer3 {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        transform: translateY(50%);
+        z-index: 10;
+      }
+
+      .content {
+        padding: 100px;
+      }
+      h2 {
+        margin: 24px 0;
+        font-size: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="zoom">
+      <img
+        src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+        alt=""
+        class="layer1"
+      />
+      <img
+        src="css/img/fotis-fotopoulos-xQ2qynQ92xs-unsplash.jpg"
+        alt=""
+        class="layer2"
+      />
+      <img
+        src="css/img/garvit-jagga-3IyjBegTXLA-unsplash.jpg"
+        alt=""
+        class="layer3"
+      />
+    </section>
+    <section class="content">
+      <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+        expedita cum suscipit vero, magnam et recusandae nulla! Itaque velit
+        dolor sapiente vero harum ipsum doloremque cumque? Quia minus quis
+        molestias ducimus fugiat accusantium impedit eligendi, eaque facilis
+        numquam in odit porro earum a inventore voluptates suscipit! Labore
+        fugiat sunt a, vero pariatur non tempora nulla dolore. Eius enim tempora
+        ipsa debitis quod fuga ea numquam, repellat in amet unde molestiae
+        provident! Laboriosam architecto ratione quia nihil amet in, doloribus
+        tempora iure quibusdam aperiam, rerum, ipsam voluptatibus voluptate.
+        Necessitatibus dolorum repellat vero asperiores magnam officiis, nostrum
+        vitae omnis perspiciatis, porro dicta!
+      </p>
+    </section>
+
+    <script>
+      let layer1 = document.querySelector(".layer1");
+      let layer2 = document.querySelector(".layer2");
+      let scroll = window.pageYOffset;
+      window.addEventListener("scroll", function (e) {
+        let offset = window.pageYOffset;
+        scroll = offset;
+        // layer2.style.width = 100 + scroll / 10 + "%";
+        layer2.style.width = 20 + scroll / 5 + "%";
+      });
+      document.addEventListener("scroll", function (e) {
+        let offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = 100 + scroll / 50 + "%";
+        // layer2.style.width = 10 + scroll / 5 + "%";
+      });
+    </script>
+  </body>
+</html>
