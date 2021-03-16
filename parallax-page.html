@@ -5,6 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/parallax-page.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+        <div class="item">
+          <div class="img-wrap"></div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let current = 0;
+      let target = 0;
+      let ease = 0.1;
+
+      let windowWidth, containerHeight, imageHeight, skewDiff;
+
+      let container = document.querySelector(".container");
+      let images = Array.from(document.querySelectorAll(".img-wrap"));
+      // console.log(images);
+
+      images.forEach((image, idx) => {
+        image.style.backgroundImage = `url(./img/${idx + 1}.jpg)`;
+      });
+
+      function lerp(start, end, t) {
+        return start * (1 - t) + end * t;
+      }
+
+      function setTransform(el, transform) {
+        el.style.transform = transform;
+      }
+
+      function setupAnimation() {
+        windowWidth = window.innerWidth;
+        containerHeight = container.getBoundingClientRect().height;
+        imageHeight =
+          containerHeight /
+          (windowWidth > 760 ? images.length / 2 : images.length);
+
+        document.body.style.height = `${containerHeight}px`;
+        smoothScroll();
+      }
+
+      function smoothScroll() {
+        current = lerp(current, target, ease);
+        current = parseFloat(current.toFixed(2));
+        target = window.scrollY;
+
+        skewDiff = (target - current) * 0.009;
+        setTransform(
+          container,
+          `translateY(${-current}px) skewY(${skewDiff}deg)`
+        );
+        requestAnimationFrame(smoothScroll);
+      }
+
+      function updateImages() {
+        let ratio = current / imageHeight;
+        let intersectionRatioIndex, intersectionRatioValue;
+
+        images.forEach((image, idx) => {
+          intersectionRatioIndex = windowWidth > 760 ? parseInt(idx / 2) : idx;
+          intersectionRatioValue = ratio - intersectionRatioIndex;
+          setTransform(image, `transformY${intersectionRatioValue * 100}px`);
+        });
+      }
+
+      setupAnimation();
+    </script>
+  </body>
 </html>
