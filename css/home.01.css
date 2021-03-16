@@ -67,10 +67,22 @@ body {
   margin: 0 auto;
 }
 
+.cursor{
+  position: absolute;
+  top: -24px;
+  width: 12px;
+  height: 12px;
+  background: #005ffe;
+  border-radius: 50%;
+  transition: 160ms;
+  z-index: 1000;
+}
+
 .home {
   width: 100%;
   min-height: 80vh;
   /* background: beige; */
+  margin: 40vh 0;
 }
 
 .home-ctn {

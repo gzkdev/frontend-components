@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="css/home.01.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <section class="home" data-scroll-section>
+      <div class="home-ctn ctn">
+        <div
+          class="home-left"
+          data-scroll
+          data-scroll-speed="9"
+          data-scroll-delay="0.4"
+        >
+          <h1 class="home-txt h1" data-scroll>The travel space</h1>
+          <p class="home-txt p" data-scroll data-scroll-offset="200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            quasi aut animi, iste ut ea exercitationem debitis voluptatibus id!
+          </p>
+        </div>
+        <div
+          class="home-right c-speed-block is-inview"
+          data-scroll
+          data-scroll-speed="2"
+        >
+          <img
+            src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+            alt=""
+            class="home-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="home">
+      <div class="home-ctn ctn">
+        <div class="home-left">
+          <h1 class="home-txt h1">The travel space</h1>
+          <p class="home-txt p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            quasi aut animi, iste ut ea exercitationem debitis voluptatibus id!
+          </p>
+        </div>
+        <div class="home-right">
+          <img
+            src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+            alt=""
+            class="home-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="home">
+      <div class="home-ctn ctn">
+        <div class="home-left">
+          <h1 class="home-txt h1">The travel space</h1>
+          <p class="home-txt p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            quasi aut animi, iste ut ea exercitationem debitis voluptatibus id!
+          </p>
+        </div>
+        <div class="home-right">
+          <img
+            src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"
+            alt=""
+            class="home-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+      (function () {
+        let scroll = new LocomotiveScroll();
+      })();
+
+      document.body.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        // console.log(mouseX, mouseY);
+
+        gsap.set(".cursor", {
+          x: mouseX,
+          y: mouseY,
+        });
+      });
+    </script>
+  </body>
+</html>
