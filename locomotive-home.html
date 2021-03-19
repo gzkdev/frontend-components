@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <link rel="stylesheet" href="css/locomotive-home.css" />
+  </head>
+  <body>
+    <div class="home-container" data-scroll-container>
+      <header class="header"></header>
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-content">
+              <p data-scroll data-scroll-speed="1">Hi, I'm Ezihe Godswill</p>
+              <h1 class="heading" data-scroll data-scroll-speed="1.5">
+                Frontend Software Engineer
+              </h1>
+              <p data-scroll data-scroll-speed="1.5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corporis id, error aliquid quasi amet iure sint deserunt nisi
+                quia? Repellat quisquam ipsum quia! Ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-img-section" data-scroll-section>
+        <div
+          class="parallax-image-wrapper"
+          data-scroll
+          data-scroll-call="dynamicBackground"
+          data-scroll-repeat
+        >
+          <div class="o-image" data-scroll data-scroll-speed="-4">
+            <img src="img/4.jpg" alt="" class="parallax-image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-content">
+              <p data-scroll data-scroll-speed="1">Hi, I'm Ezihe Godswill</p>
+              <h1 data-scroll data-scroll-speed="1.5">
+                Frontend Software Engineer
+              </h1>
+              <p data-scroll data-scroll-speed="1.5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corporis id, error aliquid quasi amet iure sint deserunt nisi
+                quia? Repellat quisquam ipsum quia! Ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-content">
+              <p data-scroll data-scroll-speed="1">Hi, I'm Ezihe Godswill</p>
+              <h1 data-scroll data-scroll-speed="1.5">
+                Frontend Software Engineer
+              </h1>
+              <p data-scroll data-scroll-speed="1.5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corporis id, error aliquid quasi amet iure sint deserunt nisi
+                quia? Repellat quisquam ipsum quia! Ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-img-ctn" data-scroll>
+              <div class="home-img-box" data-scroll data-scroll-speed="-3">
+                <img
+                  src="img/img/pexels-harry-cooke-6805803.jpg"
+                  alt=""
+                  class="home-img"
+                />
+              </div>
+            </div>
+            <div class="home-img-ctn" data-scroll>
+              <div class="home-img-box" data-scroll data-scroll-speed="-3">
+                <img
+                  src="img/img/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg"
+                  alt=""
+                  class="home-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-content">
+              <p data-scroll data-scroll-speed="1">Hi, I'm Ezihe Godswill</p>
+              <h1 data-scroll data-scroll-speed="1.5">
+                Frontend Software Engineer
+              </h1>
+              <p data-scroll data-scroll-speed="1.5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corporis id, error aliquid quasi amet iure sint deserunt nisi
+                quia? Repellat quisquam ipsum quia! Ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" data-scroll-section>
+        <div class="ctn">
+          <div class="home-ctn">
+            <div class="home-content">
+              <p data-scroll data-scroll-speed="1">Hi, I'm Ezihe Godswill</p>
+              <h1 data-scroll data-scroll-speed="1.5">
+                Frontend Software Engineer
+              </h1>
+              <p data-scroll data-scroll-speed="1.5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Corporis id, error aliquid quasi amet iure sint deserunt nisi
+                quia? Repellat quisquam ipsum quia! Ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script>
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power2.inOut", duration: 1 },
+      });
+
+      tl.from(".heading", { clipPath: "inset(0 0 100% 0)" }, "+=0.2");
+    </script>
+  </body>
+</html>
