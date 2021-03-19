@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <style>
+      @font-face {
+        src: url(css/fonts/Poppins/Poppins-Bold.ttf);
+        font-family: Poppins;
+        font-weight: bold;
+      }
+      @font-face {
+        src: url(css/fonts/Poppins/Poppins-Regular.ttf);
+        font-family: Poppins;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --font-size-nm: 1.125rem;
+        --font-size-lg: 2.4rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+      }
+
+      body {
+        width: 100%;
+        min-height: 150vh;
+        font-size: 1rem;
+        font-family: Poppins, sans-serif;
+        font-weight: normal;
+        line-height: 1.5;
+        background: #f2f2f2;
+        color: #444;
+      }
+
+      .ctn {
+        width: 100%;
+        max-width: 1240px;
+        padding: 16px;
+        margin: 0 auto;
+      }
+
+      .content {
+        margin: 200px 10px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      section{
+          height: 100vh;
+          padding: 5rem 0;
+
+          margin: 20vh 0;
+      }
+
+      .section{
+          position: relative;
+          width: 100%;
+          height: 100vh;
+      }
+
+      .section-img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 120%;
+          height: 120%;
+          display: block;
+          object-fit: cover;
+      }
+
+      
+
+      h2{
+          margin: 16px 0;
+      }
+
+      .o-image_wrapper{
+          width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background-color: #d4c9c9;
+      }
+
+      .o-image img{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+      }
+      
+      .grid-ctn{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+      }
+
+      .grid-item{
+          flex: 1 100%;
+          max-width: 45%;
+          height: 500px;
+          overflow: hidden;
+      }
+
+      .grid-img{
+          width: 100%;
+          max-width: 600px !important;
+          height: 100%;
+          display: inline-block;
+          object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-scroll-container>
+      <section data-scroll-section>
+        <div class="content">
+            <h2 data-scroll data-scroll-speed="2">
+              The boring company that creates fun
+            </h2>
+            <p class="p" data-scroll data-scroll-speed="1.5">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
+              voluptas placeat dignissimos dolore molestiae eveniet. Rem minima
+              assumenda eveniet aliquam sit quibusdam, unde maxime?
+            </p>
+      </section> 
+      <section class="section" data-scroll-section>
+        <div class="o-image_wrapper is-inview"  data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
+            <div class="o-image is-inview" data-scroll data-scroll-speed="-2">
+                <img src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg"alt="" class="c-speed-block_image">
+            </div>
+        </div>
+      </section>
+      <section data-scroll-section>
+        <div class="content">
+            <h2 data-scroll data-scroll-speed="2">
+              The boring company that creates living
+            </h2>
+            <p class="p" data-scroll data-scroll-speed="1.5">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
+              voluptas placeat dignissimos dolore molestiae eveniet. Rem minima
+              assumenda eveniet aliquam sit quibusdam, unde maxime?
+            </p>
+      </section>
+      <section data-scroll-section>
+
+        <div class="o-image_wrapper is-inview" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat="">
+            <div class="o-image is-inview" data-scroll data-scroll-speed="-2">
+                <img class="c-speed-block_image" src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg" alt="Locomotive image from unsplash">
+            </div>
+        </div>
+      </section>
+      
+      <section data-scroll-section>
+        <div class="content">
+            <h2 data-scroll data-scroll-speed="2">
+              The boring company that creates fun
+            </h2>
+            <p class="p" data-scroll data-scroll-speed="1.5">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
+              voluptas placeat dignissimos dolore molestiae eveniet. Rem minima
+              assumenda eveniet aliquam sit quibusdam, unde maxime?
+            </p>
+      </section> 
+
+      <section class="grid-section" data-scroll-section>
+          <div class="ctn">
+            <div class="grid-ctn">
+                <div class="grid-item">
+                    <div class="o-image_wrapper is-inview" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat="">
+                        <div class="o-image is-inview" data-scroll data-scroll-speed="-2">
+                            <img class="grid-img" src="css/img/garvit-jagga-3IyjBegTXLA-unsplash.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="o-image_wrapper is-inview" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat="">
+                        <div class="o-image is-inview" data-scroll data-scroll-speed="-2">
+                            <img class="grid-img" src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+      <section data-scroll-section>
+        <div class="content">
+            <h2 data-scroll data-scroll-speed="2">
+              The boring company that creates fun
+            </h2>
+            <p class="p" data-scroll data-scroll-speed="1.5">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
+              voluptas placeat dignissimos dolore molestiae eveniet. Rem minima
+              assumenda eveniet aliquam sit quibusdam, unde maxime?
+            </p>
+      </section> 
+    </div>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script>
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+    </script>
+  </body>
+</html>
