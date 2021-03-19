@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        padding-top: 200px;
+      }
+
+      .item {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+
+        border-top: 1px black solid;
+        margin-top: 200px;
+        margin-left: 100px;
+      }
+
+      .item:first-child {
+        margin-top: 0;
+      }
+
+      .image {
+        position: relative;
+        width: 500px;
+        height: 500px;
+
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        transform: scale(1.2, 1.6);
+        transform-origin: top left;
+      }
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+      }
+
+      h1,
+      p {
+        color: black;
+        font-size: 3em;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item">
+        <div class="image">
+          <img src="css/img/deva-darshan-Mg7-UmvGIH8-unsplash.jpg" alt="" />
+        </div>
+
+        <div class="info">
+          <h1>text</h1>
+          <p>$0</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="image">
+          <img src="css/img/garvit-jagga-3IyjBegTXLA-unsplash.jpg" alt="" />
+        </div>
+        <div class="info">
+          <h1>text</h1>
+          <p>$0</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="image">
+          <img src="css/img/fotis-fotopoulos-xQ2qynQ92xs-unsplash.jpg" alt="" />
+        </div>
+        <div class="info">
+          <h1>text</h1>
+          <p>$0</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="image">
+          <img src="css/img/home-img.svg" alt="" />
+        </div>
+        <div class="info">
+          <h1>text</h1>
+          <p>$0</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script>
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".wrapper"),
+        smooth: true,
+      });
+      locoScroll.on("scroll", ScrollTrigger.update);
+      ScrollTrigger.scrollerProxy(".wrapper", {
+        scrollTop(value) {
+          return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: document.querySelector(".wrapper").style.transform
+          ? "transform"
+          : "fixed",
+      });
+
+      gsap.utils.toArray("img").forEach((section, i) => {
+        gsap.set(section, {
+          xPercent: -10,
+          yPercent: -40,
+        });
+        gsap.to(section, {
+          scrollTrigger: {
+            markers: true,
+            scroller: ".wrapper",
+            onUpdate: (self) => {
+              gsap.set(section, {
+                yPercent: self.progress * 40 - 40,
+              });
+            },
+            trigger: section,
+            start: Math.max(-400 + i * -100, -1000) + "px top",
+            end: "200% center",
+            scrub: true,
+          },
+        });
+      });
+
+      ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+      ScrollTrigger.refresh();
+    </script>
+  </body>
+</html>
