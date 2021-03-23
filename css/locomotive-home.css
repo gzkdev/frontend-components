@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --sunset1: #332971;
+  --sunset2: #643569;
+  --sunset3: #9f3b60;
+  --sunset4: #c8485f;
+  --sunset5: #fb685d;
+  --sunset6: #ff7245;
+}
+
 .ctn {
   width: 100%;
   max-width: 1140px;
