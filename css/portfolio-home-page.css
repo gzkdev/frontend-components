@@ -58,11 +58,16 @@ h6 {
   font-weight: bold;
 }
 
-.ctn {
+.ctn,
+.ctn-md {
   width: 100%;
   max-width: var(--max-width);
   padding: 12px 16px;
   margin: 0 auto;
+}
+
+.ctn-md {
+  padding: 12px 0;
 }
 
 .section {
@@ -132,6 +137,11 @@ h6 {
   height: 3.2px;
   background: currentColor;
   border-radius: 2px;
+}
+
+.ctn-md .home-header,
+.project-text-ctn {
+  padding: 0 16px;
 }
 
 .projects-box {
