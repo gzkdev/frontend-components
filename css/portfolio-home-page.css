@@ -153,7 +153,9 @@ h6 {
 }
 
 .project-text-ctn,
-.project-img-box {
+.project-img-box,
+.contact-text-ctn,
+.contact-form {
   flex: 1 100%;
   max-width: 100%;
 }
@@ -206,29 +208,110 @@ h6 {
   transform-origin: right;
 }
 
+.contact-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-text-ctn,
+.contact-form {
+  margin: 24px 0;
+}
+
+.contact-text-ctn {
+  align-self: flex-start;
+  margin-top: 40px;
+  padding: 36px 0;
+}
+
+.input-container {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 12px auto;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.4px;
+  margin: 2px 0;
+  color: #454545;
+}
+
+.input-box,
+.form-submit-btn {
+  height: 48px;
+  width: 100%;
+  font-family: inherit;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #454545;
+  border-radius: 4px;
+}
+
+.input-box:hover,
+.input-box:focus,
+.form-text-box:hover,
+.form-text-box:focus {
+  border: 1.2px solid #757575;
+  outline: none;
+}
+
+.form-text-box {
+  width: 100%;
+  height: 120px;
+  font-family: inherit;
+  padding: 8px;
+  margin: 12px 0;
+  border: 1px solid #454545;
+  border-radius: 4px;
+}
+
+/* .form-submit-btn {
+  
+} */
+
 @media (min-width: 760px) {
   :root {
-    --font-size-sm: 12px;
+    --font-size-sm: 14px;
     --font-size-nm: 14px;
     --font-size-md: 24px;
     --font-size-xmd: 32px;
     --font-size-lg: 56px;
   }
   .project-text-ctn,
-  .project-img-box {
+  .project-img-box,
+  .contact-text-ctn,
+  .contact-form {
     max-width: 45%;
   }
-}
-
-@media (min-width: 760px) {
   .project {
     min-height: 50vh;
   }
   .project-text-ctn {
     max-width: 40%;
   }
-
+  .project-img-box,
+  .contact-form {
+    max-width: 50%;
+  }
   .project-two .project-text-ctn {
     order: 2;
+  }
+  .contact-text-ctn,
+  .contact-form {
+    margin: 12px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-text-ctn {
+    padding: 36px 20px 0 0;
   }
 }
