@@ -125,7 +125,7 @@ h6 {
   display: inline-block;
   text-decoration: none;
   color: inherit;
-  font-family: Recoleta, sans-serif;
+  font-size: var(--font-size-xmd);
 }
 
 .ctn-md .home-header,
@@ -155,7 +155,9 @@ h6 {
 .project-text-ctn,
 .project-img-box,
 .contact-text-ctn,
-.contact-form {
+.contact-form,
+.social-text-ctn,
+.social-links-ctn {
   flex: 1 100%;
   max-width: 100%;
 }
@@ -277,6 +279,44 @@ h6 {
   
 } */
 
+.social-ctn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-link {
+  position: relative;
+  display: block;
+  height: 56px;
+  font-size: var(--font-size-xmd);
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0.64px;
+  color: inherit;
+  padding: 4px 0;
+  margin: 12px 0;
+}
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.64px;
+  background: currentColor;
+  border-radius: 100vh;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 400ms;
+}
+
+.social-link:hover::before {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
 @media (min-width: 760px) {
   :root {
     --font-size-sm: 14px;
@@ -285,10 +325,15 @@ h6 {
     --font-size-xmd: 32px;
     --font-size-lg: 56px;
   }
+  .section {
+    min-height: 60vh;
+  }
   .project-text-ctn,
   .project-img-box,
   .contact-text-ctn,
-  .contact-form {
+  .contact-form,
+  .social-text-ctn,
+  .social-links-ctn {
     max-width: 45%;
   }
   .project {
@@ -298,7 +343,8 @@ h6 {
     max-width: 40%;
   }
   .project-img-box,
-  .contact-form {
+  .contact-form,
+  .social-link-ctn {
     max-width: 50%;
   }
   .project-two .project-text-ctn {
