@@ -37,6 +37,10 @@
   box-sizing: border-box;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -282,6 +286,7 @@ h6 {
 .social-ctn {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -317,6 +322,26 @@ h6 {
   transform-origin: left;
 }
 
+.footer {
+  width: 100%;
+  background: #757575;
+  padding-top: 160px;
+  border-radius: 48px 48px 0 0;
+}
+
+.footer-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-box,
+.footer-text {
+  flex: 1 100%;
+  width: 100%;
+  padding: 16px;
+}
+
 @media (min-width: 760px) {
   :root {
     --font-size-sm: 14px;
@@ -324,6 +349,10 @@ h6 {
     --font-size-md: 24px;
     --font-size-xmd: 32px;
     --font-size-lg: 56px;
+  }
+
+  .footer-text {
+    max-width: 30%;
   }
   .section {
     min-height: 60vh;
