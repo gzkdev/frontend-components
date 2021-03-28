@@ -12,10 +12,23 @@
     <header class="header">
       <div class="ctn header-ctn">
         <div class="logo logo-header">LOGO</div>
-        <nav class="header-nav"></nav>
-        <div class="menu-box">
-          <div class="menu">MENU</div>
-        </div>
+        <nav class="header-nav">
+          <ul>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Home</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">About</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Portfolio</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-menu"><span class="fas fa-bars"></span></div>
       </div>
     </header>
     <section class="section home">
@@ -32,9 +45,9 @@
         >
       </div>
     </section>
-    <section class="section">
+    <section class="section project">
       <div class="projects-ctn ctn-md">
-        <header class="home-header">
+        <header class="home-header home-header-alt">
           <h2 class="home-sub-heading">Featured</h2>
           <h1 class="home-heading">
             <span class="notice">Projects</span>
@@ -100,7 +113,7 @@
     </section>
     <section class="section">
       <div class="contact-ctn ctn">
-        <header class="home-header">
+        <header class="home-header home-header-alt">
           <h2 class="home-sub-heading">Let's build something</h2>
           <h1 class="home-heading">
             <span class="notice">Together</span>
@@ -166,6 +179,15 @@
     <!-- <script src="js/ScrollTrigger.min.js"></script> -->
     <!-- <script src="js/locomotive-scroll.min.js"></script> -->
     <script src="js/all.js"></script>
+    <script>
+      let menu = document.querySelector(".header-menu");
+      let nav = document.querySelector(".header-nav");
+
+      menu.addEventListener("click", function () {
+        nav.classList.toggle("open");
+        this.classList.toggle("active");
+      });
+    </script>
     <script>
       // const scroller = new LocomotiveScroll({
       //   el: document.querySelector(".data-scroll-container"),
