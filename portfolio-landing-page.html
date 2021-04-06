@@ -187,18 +187,32 @@
         nav.classList.toggle("open");
         this.classList.toggle("active");
       });
-    </script>
-    <script>
-      // const scroller = new LocomotiveScroll({
-      //   el: document.querySelector(".data-scroll-container"),
-      //   smooth: true,
-      // });
 
-      // let menuIcon = document.querySelector(".menu-box");
-      // menuIcon.addEventListener("click", (e) => {
-      //   let navigation = document.querySelector(".home-nav-box");
-      //   navigation.classList.toggle("open");
-      // });
+      let currentPixel = window.pageYOffset;
+
+      function skew(){
+        let newPixel = window.pageYOffset;
+        let increment = newPixel - currentPixel;
+        let speed = increment * 0.20;
+        document.querySelector('.project').style.transform = "skewY("+ speed + "deg";
+        currentPixel = newPixel;
+
+        requestAnimationFrame(skew);
+      }
+
+      skew();
     </script>
+    <!-- <script>
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector(".data-scroll-container"),
+        smooth: true,
+      });
+
+      let menuIcon = document.querySelector(".menu-box");
+      menuIcon.addEventListener("click", (e) => {
+        let navigation = document.querySelector(".home-nav-box");
+        navigation.classList.toggle("open");
+      });
+    </script> -->
   </body>
 </html>
