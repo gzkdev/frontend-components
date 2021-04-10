@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        src: url(css/fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Regular.woff);
+        font-family: Poppins;
+        font-weight: normal;
+      }
+      @font-face {
+        src: url(css/fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Bold.woff);
+        font-family: Poppins;
+        font-weight: bold;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-01: #132a13;
+        --color-02: #31572c;
+        --color-03: #4f772d;
+        --color-04: #90a955;
+        --color-05: #ecf3a0;
+        --color-06: #ebe7db;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.64px;
+        color: var(--color-05);
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        line-height: 1.5;
+        font-family: Poppins, sans-serif;
+        font-weight: normal;
+        flex-direction: column;
+        color: var(--color-06);
+        background: var(--color-01);
+      }
+
+      .ctn {
+        width: 100%;
+        max-width: 1140px;
+        height: inherit;
+        padding: 16px;
+        margin: 0 auto;
+      }
+      .home {
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 0;
+      }
+      .home-text-ctn {
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 48px auto;
+        text-align: center;
+      }
+
+      .home-heading {
+        font-size: 3.2rem;
+        margin: 24px 0;
+      }
+      .home-cta {
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--color-01);
+        background: var(--color-05);
+        padding: 12px 32px;
+        margin: 32px 0 0 0;
+        transition: 300ms;
+      }
+      .home-cta:hover {
+        background: var(--color-02);
+        color: var(--color-05);
+      }
+
+      .home-img {
+        width: 100%;
+        height: 72vh;
+        object-fit: cover;
+      }
+      .social-stats {
+        width: 100%;
+        min-height: 40vh;
+        display: flex;
+        justify-content: center;
+      }
+      .social-stats-ctn {
+        max-width: 880px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .social-stat-div {
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+      }
+      .social-stat-score {
+        font-size: 2rem;
+        margin: 12px;
+      }
+      .social-stat-category {
+        font-size: 1.4rem;
+      }
+      .visuals {
+        width: 100%;
+        min-height: 100vh;
+        padding: 24px 0;
+      }
+      .visuals-ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section-heading {
+        font-size: 2.8rem;
+        width: 80%;
+        max-width: 880px;
+        text-align: center;
+        color: var(--color-04);
+        margin: 48px 0;
+      }
+      .feature {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 64px auto;
+      }
+      .feature-img {
+        display: inline-block;
+        width: 100%;
+        height: 480px;
+        margin: 24px 16px;
+        object-fit: cover;
+      }
+
+      .feature-img--odd {
+        order: 1;
+      }
+
+      .feature-text-ctn {
+        width: 100%;
+        margin: 4px;
+      }
+
+      .feature-heading {
+        font-size: 1.64rem;
+        margin: 24px 0;
+      }
+
+      .testimonials {
+        width: 100%;
+        min-height: 60vh;
+        background: var(--color-02);
+        padding: 64px 0;
+      }
+
+      .testimonials-ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .testimonials-box {
+        width: 100%;
+        max-width: 720px;
+        min-height: 40vh;
+        border: 2px solid var(--color-01);
+      }
+
+      .testimonial-div {
+        width: 90%;
+        margin: 24px auto;
+      }
+      .testimonial-title {
+        margin: 24px 0;
+        color: var(--color-05);
+        letter-spacing: 1.2px;
+        font-size: 0.9rem;
+      }
+
+      .carousel-ctrl {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 720px;
+        padding: 24px 0;
+      }
+
+      .carousel-ctrl-prev,
+      .carousel-ctrl-next {
+        margin: 0 24px 0 0;
+        padding: 16px 24px;
+        font-weight: bold;
+        color: var(--color-04);
+        background: var(--color-01);
+        border: 2px solid var(--color-01);
+        cursor: pointer;
+        transition: 300ms;
+      }
+
+      .carousel-ctrl-prev:hover,
+      .carousel-ctrl-next:hover {
+        color: var(--color-05);
+      }
+
+      .footer {
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 0;
+        width: 100%;
+        min-height: 40vh;
+        background: var(--color-01);
+        z-index: -2;
+      }
+      @media (min-width: 768px) {
+        .home-img {
+          height: 88vh;
+        }
+
+        .feature {
+          max-width: 880px;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+          margin: 120px auto;
+        }
+
+        .feature-img {
+          max-width: 360px;
+          height: 540px;
+          margin: 0 16px;
+        }
+
+        .feature-img--odd {
+          order: 0;
+        }
+
+        .feature-text-ctn {
+          position: sticky;
+          position: -webkit-sticky;
+          top: 144px;
+          max-width: 480px;
+          margin: 0 16px;
+        }
+
+        .social-stat-div {
+          max-width: 240px;
+        }
+
+        .testimonials-box {
+          min-height: 32vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="home" id="home">
+      <div class="home-ctn ctn">
+        <div class="home-text-ctn">
+          <h1 class="home-heading">Nature's Garden &amp; Beauty</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+            recusandae facere ullam?
+          </p>
+          <a href="#home" class="home-cta">Explore Nature's Beauty</a>
+        </div>
+      </div>
+    </section>
+    <img
+      src="css/img/morten-hornum-UPQm9_3Qu7I-unsplash.jpg"
+      alt=""
+      class="home-img"
+    />
+    <section class="social-stats">
+      <div class="social-stats-ctn ctn">
+        <div class="social-stat-div">
+          <h3 class="social-stat-score">100k+</h3>
+          <span class="social-stat-category">Users</span>
+        </div>
+        <div class="social-stat-div">
+          <h3 class="social-stat-score">154+</h3>
+          <span class="social-stat-category">Countries</span>
+        </div>
+        <div class="social-stat-div">
+          <h3 class="social-stat-score">1000+</h3>
+          <span class="social-stat-category">Partners</span>
+        </div>
+      </div>
+    </section>
+    <section class="visuals" id="visuals">
+      <div class="visuals-ctn ctn">
+        <h2 class="section-heading">You need to see more</h2>
+        <div class="feature">
+          <div class="feature-text-ctn">
+            <h3 class="feature-heading">Two-way benefits</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              aliquam, amet inventore exercitationem magni eaque molestias eius!
+              Iure?
+            </p>
+          </div>
+          <img
+            src="img/maggie-jaszowska-MoR2SX1WQzo-unsplash.jpg"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+
+        <div class="feature">
+          <img
+            src="img/img/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg"
+            alt=""
+            class="feature-img feature-img--odd"
+          />
+          <div class="feature-text-ctn">
+            <h3 class="feature-heading">Nature's Reconnection</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+              labore ipsa aliquam, ea rerum cum voluptatibus commodi asperiores
+              aspernatur quia perspiciatis nostrum quos ducimus?
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-text-ctn">
+            <h3 class="feature-heading">Long-term fulfillment</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+              laboriosam sit deleniti ratione accusantium molestiae
+              voluptatibus. Sapiente, labore. Vero!
+            </p>
+          </div>
+          <img
+            src="img/img/pexels-harry-cooke-6805803.jpg"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+
+        <div class="feature">
+          <img
+            src="img/img/pexels-rudolph-thomas-2962265.jpg"
+            alt=""
+            class="feature-img feature-img--odd"
+          />
+          <div class="feature-text-ctn">
+            <h3 class="feature-heading">The Beauty &amp; Glow</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias sint, consequatur expedita voluptas corporis dolore
+              sequi?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials-ctn ctn">
+        <h2 class="section-heading">Nice things people say about us</h2>
+        <div class="testimonials-box siema">
+          <div class="testimonial-div">
+            <h3 class="feature-heading">John Nathan</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              magnam vitae ipsam corrupti, molestias, aspernatur excepturi
+              blanditiis delectus facere, eos veniam perspiciatis ea odio!
+            </p>
+            <h4 class="testimonial-title">CEO waterwayys</h4>
+          </div>
+          <div class="testimonial-div">
+            <h3 class="feature-heading">Adrian Normann</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              magnam vitae ipsam corrupti, molestias, aspernatur excepturi
+              blanditiis delectus facere, eos veniam perspiciatis ea odio!
+            </p>
+            <h4 class="testimonial-title">MD Twinndle Inc</h4>
+          </div>
+          <div class="testimonial-div">
+            <h3 class="feature-heading">Peter Walters</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              magnam vitae ipsam corrupti, molestias, aspernatur excepturi
+              blanditiis delectus facere, eos veniam perspiciatis ea odio!
+            </p>
+            <h4 class="testimonial-title">CTO Quaysire co</h4>
+          </div>
+        </div>
+        <div class="carousel-ctrl">
+          <span class="carousel-ctrl-prev">Prev</span>
+          <span class="carousel-ctrl-next">Next</span>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-ctn ctn"></div>
+    </footer>
+    <script src="js/siema.min.js"></script>
+    <script>
+      const mySiema = new Siema({
+        perPage: 1,
+        duration: 600,
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+      });
+      document
+        .querySelector(".carousel-ctrl-prev")
+        .addEventListener("click", () => mySiema.prev());
+      document
+        .querySelector(".carousel-ctrl-next")
+        .addEventListener("click", () => mySiema.next());
+    </script>
+  </body>
+</html>

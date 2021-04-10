@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #faf3fb;
+      }
+
+      .spooky {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: hsl(294, 33%, 51%);
+        border-radius: 64px 64px 8px 8px;
+      }
+      .spooky::before,
+      .spooky::after {
+        content: "";
+        position: absolute;
+        top: 48px;
+        width: 16px;
+        height: 16px;
+        background: #111;
+        border-radius: 100vh;
+      }
+      .spooky::before {
+        left: 36px;
+      }
+      .spooky::after {
+        right: 36px;
+      }
+      .spooky-mouth {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 15px;
+        height: 8px;
+        background: #111;
+        border-radius: 0 0 16px 16px;
+      }
+      .spooky-heart {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 1.72rem;
+        color: red;
+      }
+      .heading {
+        margin: 24px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spooky">
+      <div class="spooky-mouth"></div>
+      <span class="fas fa-heart spooky-heart"></span>
+    </div>
+    <script src="js/all.js"></script>
+  </body>
+</html>
