@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/landing-page02.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-ctn ctn">
+        <a class="logo" href="#"
+          ><img src="css/img/logo.png" alt="" class="header-logo logo"
+        /></a>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Home</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Portfolio</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">About</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu"></div>
+        <div class="side-menu">
+          <div class="side-menu-ctn ctn">
+            <a href="#" class="logo"
+              ><img src="css/img/logo.png" alt="logo" class="logo"
+            /></a>
+
+            <nav class="side-menu-nav">
+              <ul class="side-menu-list">
+                <li class="side-menu-item">
+                  <a href="#" class="side-menu-link">Home</a>
+                </li>
+                <li class="side-menu-item">
+                  <a href="#" class="side-menu-link">Portfolio</a>
+                </li>
+                <li class="side-menu-item">
+                  <a href="#" class="side-menu-link">About</a>
+                </li>
+                <li class="side-menu-item">
+                  <a href="#" class="side-menu-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="side-menu-footer">
+              <h3 class="side-menu-footer-heading">Follow me</h3>
+              <nav class="side-menu-socials-nav">
+                <a class="side-menu-socials-link" href="#"
+                  ><span class="fab fa-linkedin"></span
+                ></a>
+                <a class="side-menu-socials-link" href="#"
+                  ><span class="fab fa-twitter"></span
+                ></a>
+                <a class="side-menu-socials-link" href="#"
+                  ><span class="fab fa-github"></span
+                ></a>
+                <a class="side-menu-socials-link" href="#"
+                  ><span class="fab fa-codepen"></span
+                ></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="home" id="#home">
+      <div class="home-ctn ctn">
+        <div class="home-text-ctn">
+          <!-- <span class="home-sub-heading">Hi there, I'm Godswill</span> -->
+          <h1 class="home-heading">
+            Hi there, I'm <span class="focus-text">Godswill</span>
+          </h1>
+          <p class="home-text">
+            I help small and medium sized build user-focused products with great
+            user-experience and better accessiblity
+          </p>
+          <a href="#" class="home-link">Contact me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-ctn ctn">
+        <div class="section-header">
+          <h2 class="section-heading">
+            Featured <span class="focus-text">Projects</span>
+          </h2>
+        </div>
+        <div class="portfolio-item"></div>
+        <div class="portfolio-item"></div>
+        <div class="portfolio-item"></div>
+      </div>
+    </section>
+
+    <script src="js/all.js"></script>
+    <script>
+      let menu = document.querySelector(".menu");
+      let sideMenu = document.querySelector(".side-menu");
+      menu.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        sideMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
