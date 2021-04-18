@@ -77,9 +77,12 @@
     <section class="home" id="#home">
       <div class="home-ctn ctn">
         <div class="home-text-ctn">
+          <img src="img/ezgif.com-gif-maker-(4).png" alt="" class="home-img" />
+          <p class="home-text name">Hi, I'm Godswill</p>
           <!-- <span class="home-sub-heading">Hi there, I'm Godswill</span> -->
           <h1 class="home-heading">
-            Hi there, I'm <span class="focus-text">Godswill</span>
+            <span class="focus-text">Building</span> digital products, brands
+            and experiences
           </h1>
           <p class="home-text">
             I help small and medium sized build user-focused products with great
@@ -97,19 +100,106 @@
             Featured <span class="focus-text">Projects</span>
           </h2>
         </div>
-        <div class="portfolio-item"></div>
-        <div class="portfolio-item"></div>
-        <div class="portfolio-item"></div>
+        <div class="portfolio-item">
+          <div class="portfolio-text-ctn">
+            <h3 class="portfolio-heading">NAU app</h3>
+            <p class="portfolio-paragraph">
+              Nnamdi Azikiwe University mobile app revamp project with improved
+              user-interface and user-experience
+            </p>
+            <a href="#" class="portfolio-link">Learn more</a>
+          </div>
+          <a href="#"
+            ><img
+              src="img/smartmockups_kn44eppt.png"
+              alt=""
+              class="porfolio-mockup-image"
+          /></a>
+        </div>
+        <div class="portfolio-item">
+          <a href="#" class="odd"
+            ><img
+              src="css/img/home-img.png"
+              alt=""
+              class="porfolio-mockup-image odd"
+          /></a>
+          <div class="portfolio-text-ctn">
+            <h3 class="portfolio-heading">OneTempo</h3>
+            <p class="portfolio-paragraph">
+              Nnamdi Azikiwe University mobile app revamp project with improved
+              user-interface and user-experience
+            </p>
+            <a href="#" class="portfolio-link">Learn more</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-text-ctn">
+            <h3 class="portfolio-heading">Blooomir</h3>
+            <p class="portfolio-paragraph">
+              Nnamdi Azikiwe University mobile app revamp project with improved
+              user-interface and user-experience
+            </p>
+            <a href="#" class="portfolio-link">Learn more</a>
+          </div>
+          <a href="#">
+            <img
+              src="img/smartmockups_kn44eppt.png"
+              alt=""
+              class="porfolio-mockup-image"
+          /></a>
+        </div>
       </div>
     </section>
 
+    <section class="testimonial">
+      <div class="testimonial-ctn ctn">
+        <div class="section-header">
+          <h2 class="section-heading">
+            Nice things <span class="focus-text">people say </span>about me
+          </h2>
+        </div>
+
+        <div class="testimonial-carousel-box">
+          <div class="siema testimonial-carousel">
+            <div class="testimonial-card"></div>
+            <div class="testimonial-card"></div>
+            <div class="testimonial-card"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-ctn ctn"></div>
+    </footer>
+    <script src="js/siema.min.js"></script>
     <script src="js/all.js"></script>
     <script>
+      const mySiema = new Siema({
+        perPage: 1,
+        duration: 600,
+        easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+      });
+      document
+        .querySelector(".carousel-ctrl-prev")
+        .addEventListener("click", () => mySiema.prev());
+      document
+        .querySelector(".carousel-ctrl-next")
+        .addEventListener("click", () => mySiema.next());
+
       let menu = document.querySelector(".menu");
       let sideMenu = document.querySelector(".side-menu");
+      let sideMenuLinks = document.querySelectorAll(".side-menu-link");
       menu.addEventListener("click", () => {
         menu.classList.toggle("active");
         sideMenu.classList.toggle("active");
+      });
+
+      sideMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.toggle("active");
+          sideMenu.classList.toggle("active");
+        });
       });
     </script>
   </body>
