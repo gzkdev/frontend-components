@@ -1,16 +1,16 @@
 @font-face {
   font-family: ClashDisplay;
-  src: url(fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Bold.woff);
+  src: url(fonts/Ranade_Complete/Fonts/WEB/fonts/Ranade-Bold.woff);
   font-weight: bold;
 }
 @font-face {
   font-family: ClashDisplay;
-  src: url(fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff);
+  src: url(fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.woff);
   font-weight: 600;
 }
 @font-face {
   font-family: ClashDisplay;
-  src: url(fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.woff);
+  src: url(fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Regular.woff);
   font-weight: normal;
 }
 
@@ -54,7 +54,7 @@ h6 {
   font-family: ClashDisplay, sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  letter-spacing: 1.2px;
+  /* letter-spacing: 0.4px; */
 }
 
 /* Utility classes */
@@ -102,6 +102,7 @@ section {
 
 .main {
   width: 100%;
+  min-height: 100vh;
   z-index: 100;
   background: var(--color4);
 }
@@ -133,24 +134,7 @@ section {
   display: inline-block;
   text-decoration: none;
   color: var(--color6);
-  /* font-weight: 600; */
   letter-spacing: 1.2px;
-}
-
-.footer-nav-link::before,
-.header-nav-link::before {
-  --dimension: 4px;
-  content: "";
-  position: absolute;
-  right: -6px;
-  bottom: 50%;
-  width: var(--dimension);
-  height: var(--dimension);
-  transform: translate(0, 50%);
-  background: var(--color1);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 300ms;
 }
 
 .footer-nav-link:hover,
@@ -158,13 +142,6 @@ section {
 .header-nav-link:hover,
 .header-nav-link:focus {
   color: var(--color1);
-}
-
-.footer-nav-link:hover::before,
-.footer-nav-link:focus::before,
-.header-nav-link:hover::before,
-.header-nav-link:focus::before {
-  opacity: 1;
 }
 
 .menu {
@@ -208,7 +185,6 @@ section {
   width: 100%;
   top: 0;
   left: 0;
-  /* max-width: 580px; */
   height: 100%;
   background: var(--color2);
   transform: translateX(-100%);
@@ -267,87 +243,36 @@ section {
   text-align: center;
 }
 
-.portfolio-home {
+.home {
   width: 100%;
-  min-height: 100vh;
-  padding: 96px 0;
+  min-height: 60vh;
+  padding: 96px 0 102px 0;
 }
 
-.portfolio-heading {
-  width: 100%;
-  max-width: 880px;
+.home-ctn {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-heading {
+  width: 90%;
+  max-width: 640px;
   font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin: 48px 0 64px 0;
+  font-weight: bold;
+  color: var(--color6);
   text-align: center;
+  margin: 32px auto 48px auto;
 }
 
-.portfolio-home-img {
+.home-bg-img {
   width: 100%;
   height: 560px;
-  background: url(../img/Slide\ 4_3\ -\ 1.png) center no-repeat;
+  background: var(--color6) center no-repeat;
   background-size: cover;
   background-position: top center;
-}
-
-.portfolio-cs-ctn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 64px auto;
-}
-
-.portfolio-cs-heading {
-  flex: 1 100%;
-  max-width: 320px;
-  font-weight: 600;
-  margin: 16px auto;
-}
-
-.portfolio-cs-paragraph {
-  width: 100%;
-  max-width: 560px;
-  margin: 16px auto;
-}
-
-.portfolio-home-img-md {
-  display: block;
-  width: 100%;
-  height: 400px;
-  background: var(--color5) center no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-.portfolio-gallery {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 72px auto;
-}
-
-.portfolio-gallery-item {
-  width: 100%;
-  min-height: 440px;
-  margin: 16px;
-}
-
-.portfolio-gallery-img {
-  width: 100%;
-  height: 480px;
-  background: var(--color5) center no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-.portfolio-gallery-text {
-  padding: 24px 8px;
 }
 
 .footer {
@@ -489,7 +414,6 @@ section {
     min-height: 30vh;
   }
 }
-
 @media (min-width: 880px) {
   .header-nav {
     display: block;
