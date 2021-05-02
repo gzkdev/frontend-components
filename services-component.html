@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: ClashDisplay;
+        src: url(css/fonts/Recoleta/Recoleta-Bold.ttf);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: ClashDisplay;
+        src: url(fonts/Poppins/Poppins-Regular.ttf);
+        font-weight: normal;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --color1: #f2a74b;
+        --color2: #181818;
+        --color3: #000;
+        --color4: hsl(0, 0%, 27%);
+        --color5: #ccc;
+        --color6: #999;
+        --font-size-sm: 12px;
+        --font-size-nsm: 14px;
+        --font-size-md: 20px;
+        --font-size-xmd: 24px;
+        --font-size-lg: 40px;
+        --max-width: 1140px;
+        --border-radius-sm: 4px;
+        --border-radius-md: 12px;
+        --border-radius-sm: 16px;
+        --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: ClashDisplay, sans-serif;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+
+      /* Utility classes */
+      .ctn {
+        width: 100%;
+        max-width: var(--max-width);
+        height: inherit;
+        padding: 12px 16px;
+        margin: 0 auto;
+      }
+
+      .focus-text {
+        color: var(--color1);
+      }
+
+      .section-header {
+        width: 100%;
+        max-width: 480px;
+        margin: 32px auto 48px auto;
+        text-align: center;
+        /* border: 2px solid var(--color5); */
+      }
+
+      .section-heading {
+        font-size: calc(var(--font-size-xmd) + 1rem);
+      }
+
+      body {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: ClashDisplay, sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.64px;
+        font-weight: normal;
+        background: #fafafb;
+        color: var(--color4);
+        overflow-x: hidden;
+      }
+      .services-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .services-item {
+        flex: 1 100%;
+        width: 100%;
+        font-size: 16px;
+        min-height: 360px;
+        /* background: var(--color5); */
+        margin: 24px 16px 32px 16px;
+      }
+
+      .services-item-img {
+        display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .services-item-text-box {
+        padding: 24px 0;
+        /* background: #fff; */
+      }
+      .services-item-header {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 4px 0;
+      }
+
+      @media (min-width: 500px) {
+        .services-box {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .services-item {
+          flex: 1 50%;
+        }
+      }
+      @media (min-width: 768px) {
+        .services-item {
+          flex: 1 30%;
+          max-width: 360px;
+        }
+      }
+      @media (min-width: 900px) {
+        .services-item {
+          flex: 1 40%;
+          max-width: 400px;
+        }
+
+        @media (min-width: 1200px) {
+          .services-item {
+            flex: 1 30%;
+            max-width: 360px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="services">
+      <div class="services-ctn ctn">
+        <div class="section-header">
+          <h2 class="section-heading">
+            <span class="focus-text">Delicious</span> Cakes
+          </h2>
+        </div>
+        <div class="services-box">
+          <div class="services-item">
+            <img
+              src="css/IMAGES/cakes-pics/viktor-forgacs-51AhxwkYyHo-unsplash.jpg"
+              alt=""
+              class="services-item-img"
+            />
+            <div class="services-item-text-box">
+              <div class="services-item-header">
+                <h4 class="services-item-name">Chocolate cupcakes</h4>
+                <h4 class="services-item-price">$40</h4>
+              </div>
+            </div>
+          </div>
+          <div class="services-item">
+            <img
+              src="css/IMAGES/cakes-pics/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg"
+              alt=""
+              class="services-item-img"
+            />
+            <div class="services-item-text-box">
+              <div class="services-item-header">
+                <h4 class="services-item-name">Cream cake</h4>
+                <h4 class="services-item-price">$40</h4>
+              </div>
+            </div>
+          </div>
+          <div class="services-item">
+            <img
+              src="css/IMAGES/cakes-pics/austin-moncada-JHMG8eWbTfs-unsplash.jpg"
+              alt=""
+              class="services-item-img"
+            />
+            <div class="services-item-text-box">
+              <div class="services-item-header">
+                <h4 class="services-item-name">Butter cupcakes</h4>
+                <h4 class="services-item-price">$40</h4>
+              </div>
+            </div>
+          </div>
+          <div class="services-item">
+            <img
+              src="css/IMAGES/cakes-pics/brooke-lark-pGM4sjt_BdQ-unsplash.jpg"
+              alt=""
+              class="services-item-img"
+            />
+            <div class="services-item-text-box">
+              <div class="services-item-header">
+                <h4 class="services-item-name">Wine cakes</h4>
+                <h4 class="services-item-price">$40</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

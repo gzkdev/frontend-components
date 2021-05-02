@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/onetempo-landing-page.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-ctn ctn">
+        <div class="logo-box">OnT</div>
+        <div class="menu-box">
+          <div class="notification-box"><span class="fas fa-bell"></span></div>
+          <div class="menu"></div>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <div class="home-ctn ctn">
+        <div class="home-text-ctn">
+          <h1 class="home-heading">OneTempo</h1>
+          <p class="Home-paragraph">Accurate web-based weather report tool</p>
+        </div>
+        <!-- <div class="home-form-ctn">
+          <form class="home-form">
+            <legend class="form-legend"><h3>Get weather results</h3></legend>
+            <div class="input-ctn">
+              <input
+                type="search"
+                name="
+                location"
+                id="location"
+                class="input-box"
+                placeholder="Enter city name"
+              />
+              <button class="form-submit-btn">Search</button>
+            </div>
+          </form>
+        </div> -->
+      </div>
+    </section>
+    <section class="secondary">
+      <div class="secondary-ctn ctn"></div>
+    </section>
+    <script src="js/all.js"></script>
+    <script>
+      let menu = document.querySelector(".menu");
+      let secondaryPage = document.querySelector(".secondary");
+      //   let sideMenuLinks = document.querySelectorAll(".side-menu-link");
+      menu.addEventListener("click", (e) => {
+        menu.classList.toggle("active");
+        secondaryPage.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

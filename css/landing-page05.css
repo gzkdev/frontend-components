@@ -1,0 +1,213 @@
+@font-face {
+  font-family: ClashDisplay;
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: ClashDisplay;
+  src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: ClashDisplay;
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color1: #f2a74b;
+  --color2: #181818;
+  --color3: #000;
+  --color4: #111111;
+  --color5: #ccc;
+  --color6: #999;
+  --font-size-sm: 12px;
+  --font-size-nsm: 14px;
+  --font-size-md: 20px;
+  --font-size-xmd: 24px;
+  --font-size-lg: 40px;
+  --max-width: 1140px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 16px;
+  --box-shadow-sm: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: ClashDisplay, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Utility classes */
+.ctn {
+  width: 100%;
+  max-width: var(--max-width);
+  height: inherit;
+  padding: 12px 16px;
+  margin: 0 auto;
+}
+
+.focus-text {
+  color: var(--color1);
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: ClashDisplay, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.64px;
+  font-weight: normal;
+  background: #fafafb;
+  color: var(--color4);
+  overflow-x: hidden;
+}
+
+.home,
+.testimonial {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url(IMAGES/cakes-pics/austin-moncada-JHMG8eWbTfs-unsplash.jpg) center
+      no-repeat;
+  background-size: cover;
+  background-position: top center;
+  margin: 0 0 64px 0;
+}
+
+.services,
+.products,
+.about {
+  padding: 64px 0;
+}
+
+.home-heading {
+  font-size: calc(var(--font-size-lg) + 1rem);
+  color: #fafafb;
+}
+
+.section-header {
+  width: 100%;
+  max-width: 560px;
+  margin: 24px auto;
+  text-align: center;
+  /* border: 2px solid var(--color5); */
+}
+
+.section-heading {
+  font-size: calc(var(--font-size-xmd) + 1rem);
+}
+
+.services-box,
+.product-box,
+.contact-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 64px auto;
+  border: 2px solid var(--color6);
+}
+
+.services-item,
+.product-item {
+  flex: 1 100%;
+  width: 100%;
+  min-height: 160px;
+  margin: 16px 24px;
+  background: var(--color5);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.product-item {
+  min-height: 320px;
+}
+
+.about-img {
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url(IMAGES/cakes-pics/joseph-gonzalez-TAegVkFYIqo-unsplash.jpg) center
+      no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 72px auto;
+}
+
+.testimonial {
+  background: none;
+  background-position: center center;
+}
+
+/* .testimonial .section-heading {
+  color: #fafafb;
+} */
+
+.testimonial-box {
+  width: 95%;
+  max-width: 480px;
+  height: 320px;
+  padding: 24px 16px;
+  margin: 64px auto;
+  background: #d7d7db;
+}
+
+.contact-text-ctn,
+.contact-form-ctn {
+  flex: 1 100%;
+  width: 100%;
+  max-width: 480px;
+  min-height: 400px;
+  margin: 48px 24px;
+  background: var(--color5);
+  padding: 24px 16px;
+}
+
+@media (min-width: 500px) {
+  .home,
+  .testimonial {
+    min-height: 88vh;
+  }
+  .product-item {
+    flex: 1 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-item {
+    flex: 0 0 30%;
+    max-width: 180px;
+    margin: 32px 16px;
+  }
+  .product-item {
+    flex: 1 28%;
+    max-width: 364px;
+    margin: 32px 24px;
+  }
+}
