@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proto-card</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #16384c;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+        height: 215px;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 300ms ease-in-out;
+        background: #fff;
+        border-radius: 16px;
+        /* overflow: hidden; */
+      }
+
+      .card:hover {
+        height: 420px;
+      }
+
+      .card-imgBox {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 16px;
+      }
+
+      .card-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+
+      .content {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 300ms ease-in-out;
+      }
+      .card:hover .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 300ms;
+      }
+
+      #New-shape {
+        stroke-dasharray: 496;
+        stroke-dashoffset: 496;
+        animation: sign 1000ms ease forwards;
+      }
+
+      @keyframes sign {
+        to {
+          stroke-dashoffset: 0;
+          /* stroke-dasharray: 0; */
+          /* fill: #3645f9; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="card">
+        <div class="card-imgBox">
+          <img
+            src="css/IMAGES/watches-pics/asmaa-elmasrey-taSzOxw6WvU-unsplash.jpg"
+            alt=""
+            class="card-img"
+          />
+        </div>
+        <div class="content">
+          <h3>Wrist watch</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            sint fuga magni itaque voluptates reiciendis vel, iure dolore
+            voluptatem impedit?
+          </p>
+        </div>
+      </div> -->
+      <svg
+        width="89px"
+        height="104px"
+        viewBox="0 0 89 104"
+        version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 19L0 0L83.5 0L83.5 80L16.5 80L16.5 99L0 99L0 60.5L65.5 60.5L65.5 19L0 19Z"
+          transform="translate(2.5 2.5)"
+          id="New-shape"
+          fill="none"
+          fill-rule="evenodd"
+          stroke="#3645F9"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <!-- <script>
+      const p = document.getElementById("New-shape");
+      console.log(p.getTotalLength());
+    </script> -->
+  </body>
+</html>
