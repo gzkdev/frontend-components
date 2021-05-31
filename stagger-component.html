@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav {
+        min-width: 160px;
+        padding: 12px 24px;
+        border: 1.8px solid rgb(216, 216, 216);
+        border-radius: 16px;
+      }
+
+      .nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+      }
+      .nav-link {
+        display: inline-block;
+        color: var(--color);
+        transition: 300ms;
+        font-size: 1.2rem;
+        padding: 8px 24px;
+        transform-origin: center center;
+      }
+
+      .nav-link.active {
+        animation: stagger 400ms forwards;
+        animation-fill-mode: both;
+      }
+
+      @keyframes stagger {
+        0% {
+          transform: rotateZ(30deg);
+        }
+        50% {
+          transform: rotateZ(-30deg);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link" style="--color: orange"
+            ><span class="far fa-bell nav-icon"></span
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" style="--color: blue"
+            ><span class="far fa-calendar nav-icon"></span
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a href="#" style="--color: red" class="nav-link"
+            ><span class="far fa-heart nav-icon"></span
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <script src="js/all.js"></script>
+    <script>
+      const icons = document.querySelectorAll(".nav-link");
+
+      icons.forEach((icon) => {
+        icon.addEventListener("click", () => {
+          icon.classList.add("active");
+          setTimeout(() => {
+            icon.classList.remove("active");
+          }, 600);
+        });
+      });
+    </script>
+  </body>
+</html>
