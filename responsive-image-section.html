@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background: var(--color-100);
+        color: var(--color-700);
+        font-family: sans-serif;
+      }
+
+      .ctn {
+        width: 95%;
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
+      .section {
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .images-box {
+        width: 100%;
+        max-width: 1140px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        margin: 0 auto;
+      }
+
+      .image-ctn {
+        width: 100%;
+        height: 560px;
+        /* border: 1px solid #343434; */
+        margin-bottom: 32px;
+      }
+
+      .image-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .image-ctn {
+          max-width: 48%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="image">
+      <div class="images-box">
+        <div class="image-ctn">
+          <span class="image-link">
+            <img src="img/image.png" class="image-img" />
+          </span>
+        </div>
+        <div class="image-ctn">
+          <span class="image-link">
+            <img src="img/image.png" class="image-img" />
+          </span>
+        </div>
+
+        <div class="image-ctn">
+          <span class="image-link">
+            <img src="img/8.jpg" class="image-img" />
+          </span>
+        </div>
+
+        <div class="image-ctn">
+          <span class="image-link">
+            <img
+              src="img/maggie-jaszowska-BWKMhCzxpSM-unsplash.jpg"
+              class="image-img"
+            />
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+  </body>
+</html>
