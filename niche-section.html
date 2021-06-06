@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --color-100: #fbfbfb;
+        --color-200: #d9c0b9;
+        --color-300: #070705;
+        --color-400: #5499e8;
+        --color-500: #084aef;
+        --color-600: #f0aa4d;
+        --color-700: #494143;
+        --color-800: #97634e;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background: var(--color-100);
+        color: var(--color-700);
+        font-family: sans-serif;
+      }
+
+      .ctn {
+        width: 95%;
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
+      .niche {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .niche-ctn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .niche-box {
+        display: block;
+        width: 100%;
+        flex: 1 100%;
+        /* min-height: 320px; */
+        /* background: var(--color-200); */
+        /* margin: 16px 0; */
+        /* border: 1px solid var(--color-200); */
+      }
+
+      .niche-box-ctn {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid var(--color-200); */
+      }
+
+      .niche-type-box {
+        width: 80%;
+        max-width: 240px;
+        text-align: center;
+        padding: 64px 8px 64px 8px;
+        /* border: 1px solid var(--color-200); */
+      }
+
+      .niche-type-icon-box {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+        color: var(--color-600);
+      }
+
+      .niche-type-heading {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .niche-center-img {
+        max-width: 240%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .tablet {
+        display: none;
+      }
+
+      .section-header {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 24px auto;
+        text-align: center;
+      }
+
+      .section-heading {
+        font-size: 2.24rem;
+      }
+
+      @media (min-width: 768px) {
+        .niche-ctn {
+          flex-direction: row;
+        }
+
+        .tablet {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="niche">
+      <div class="ctn">
+        <div class="section-header">
+          <h2 class="section-heading">What We Do</h2>
+        </div>
+        <div class="niche-ctn">
+          <div class="niche-box">
+            <div class="niche-box-ctn">
+              <div class="niche-type-box">
+                <div class="niche-type-icon-box">
+                  <span class="fas fa-mobile"></span>
+                </div>
+                <div class="niche-type-heading">
+                  <span>Development</span>
+                </div>
+                <div class="niche-type-text-box">
+                  <span
+                    >HTML/CSS, JavaScript Animation, WordPress, Responsive
+                    Website</span
+                  >
+                </div>
+              </div>
+              <div class="niche-type-box">
+                <div class="niche-type-icon-box">
+                  <span class="fas fa-mobile"></span>
+                </div>
+                <div class="niche-type-heading">
+                  <span>Branding</span>
+                </div>
+                <div class="niche-type-text-box">
+                  <span
+                    >Visual Identity, Stationary Kit, Marketing Materials</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="niche-box tablet">
+            <div class="niche-box-ctn">
+              <img
+                src="img/Brown-in-Jumper11.png"
+                alt=""
+                class="niche-center-img"
+              />
+            </div>
+          </div>
+          <div class="niche-box">
+            <div class="niche-box-ctn">
+              <div class="niche-type-box">
+                <div class="niche-type-icon-box">
+                  <span class="fas fa-video"></span>
+                </div>
+                <div class="niche-type-heading">
+                  <span>Motion</span>
+                </div>
+                <div class="niche-type-text-box">
+                  <span>2D Animation, UI Motion</span>
+                </div>
+              </div>
+              <div class="niche-type-box">
+                <div class="niche-type-icon-box">
+                  <span class="fas fa-mobile"></span>
+                </div>
+                <div class="niche-type-heading">
+                  <span>UI/UX</span>
+                </div>
+                <div class="niche-type-text-box">
+                  <span
+                    >Landing Pages, User Flow, Wireframing, Prototyping, Mobile
+                    App Design, Web App</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/all.js"></script>
+  </body>
+</html>
