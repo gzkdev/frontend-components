@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #fffddf;
+        --color2: #f28705;
+        --color3: #b82902;
+        --color4: #400d02;
+        --color5: #f21905;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        line-height: 1.5;
+        font-family: Inter, sans-serif;
+        font-family: 1rem;
+        background: #fff;
+        color: var(--color4);
+      }
+
+      .ctn {
+        width: 100%;
+        max-width: 1140px;
+        height: inherit;
+        padding: 0 8px;
+        margin: 0 auto;
+      }
+
+      .header {
+        position: fixed;
+        min-height: 72px;
+        width: 100%;
+        background: inherit;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+      }
+
+      .logo-box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: 0.64px;
+      }
+
+      .nav {
+        display: none;
+        height: 100%;
+      }
+
+      .nav-list {
+        width: 320px;
+        height: 100%;
+        list-style: none;
+        margin-left: auto;
+      }
+
+      .nav-item {
+        height: 100%;
+      }
+
+      .nav-link,
+      .logo {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: 0.94rem;
+        text-decoration: none;
+        color: var(--color3);
+        transition: font-weight 100ms;
+      }
+
+      .nav-link-cta {
+        display: inline-block;
+        font-size: 0.9rem;
+        color: var(--color3);
+        text-decoration: none;
+        padding: 8px 24px;
+        border-radius: 32px;
+        border: 1.8px solid var(--color3);
+        margin-right: 4px;
+        transition: 300ms;
+      }
+
+      .nav-link-cta:hover {
+        color: var(--color1);
+        background: var(--color3);
+      }
+
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--color3);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 300ms;
+      }
+
+      .nav-link:focus {
+        color: var(--color5);
+      }
+
+      .nav-link:focus::before,
+      .logo:focus::before {
+        transform: scaleX(1);
+      }
+
+      .side-nav-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: var(--color1);
+        color: var(--color4);
+        min-height: 240px;
+        border-bottom: 2px solid var(--color4);
+        transform: translateY(-100%);
+        transition: 400ms;
+        z-index: 900;
+      }
+
+      .side-nav-box.active {
+        transform: translateY(0);
+      }
+
+      .side-nav-box-list {
+        width: 100%;
+        padding-top: 80px;
+        list-style: none;
+      }
+
+      .side-nav-item {
+        width: 100%;
+        padding: 12px 24px 16px 24px;
+      }
+
+      .side-nav-link {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--color4);
+        transition: 300ms;
+      }
+
+      .side-nav-link:hover {
+        color: var(--color3);
+      }
+
+      .menu-box {
+        --size: 48px;
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+        cursor: pointer;
+      }
+
+      .menu-box::before,
+      .menu-box::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 2px;
+        background: var(--color3);
+        transition: 300ms;
+      }
+
+      .menu-box::before {
+        transform: translate(-50%, -4px);
+      }
+
+      .menu-box::after {
+        transform: translate(-50%, 4px);
+      }
+
+      .menu-box.active::before {
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+
+      .menu-box.active::after {
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+
+      .nav-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-flex-btw {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .home {
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .home-ctn {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .home-text-ctn {
+        width: 90%;
+        max-width: 480px;
+        text-align: center;
+      }
+
+      .home-heading {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        color: var(--color3);
+      }
+
+      .home-form {
+        width: 90%;
+        max-width: 320px;
+        margin-top: 24px;
+      }
+
+      .home-form-box {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1.6px solid var(--color3);
+        border-radius: 32px;
+      }
+
+      .form-input-box {
+        flex: 1 auto;
+        height: 100%;
+        font-size: 0.9rem;
+        border-radius: 32px 0 0 32px;
+      }
+
+      .form-item {
+        border: none;
+        outline: none;
+        height: 100%;
+        font-family: inherit;
+        background: none;
+        padding: 0 24px;
+      }
+
+      .form-submit-btn {
+        display: inline-block;
+        padding: 0 24px;
+        color: var(--color4);
+        cursor: pointer;
+        border-radius: 0 8px 8px 0;
+      }
+
+      @media (min-width: 768px) {
+        .home-heading {
+          font-size: 3.2rem;
+        }
+
+        .ctn {
+          width: 95%;
+          max-width: 1140px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .nav {
+          display: block;
+        }
+
+        .menu-box {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-ctn nav-flex-btw ctn">
+        <div class="logo-box"><a href="#" class="logo nav-flex">todo </a></div>
+        <nav class="nav">
+          <ul class="nav-list nav-flex-btw">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-flex">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-flex">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-flex">Pro version</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-cta-box nav-flex">
+          <a href="#" class="nav-link-cta nav-flex">Preview</a>
+          <div class="menu-box"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="side-nav-box">
+      <div class="side-nav-ctn">
+        <nav class="side-nav">
+          <ul class="side-nav-box-list">
+            <li class="side-nav-item">
+              <a href="#" class="side-nav-link">Home</a>
+            </li>
+            <li class="side-nav-item">
+              <a href="#" class="side-nav-link">About</a>
+            </li>
+            <li class="side-nav-item">
+              <a href="#" class="side-nav-link">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section class="home">
+      <div class="home-ctn ctn">
+        <div class="home-text-ctn">
+          <h1 class="home-heading">Easily Manage Your Daily Tasks</h1>
+
+          <p class="home-text-box">
+            Get your tasks under control with
+            <span class="focus-text">todo</span>. Enter your email to be
+            notified when we launch
+          </p>
+        </div>
+
+        <form class="home-form">
+          <div class="home-form-box">
+            <input
+              type="email"
+              autocomplete="off"
+              placeholder="Enter your email"
+              class="form-input-box form-item"
+              name="email"
+            /><button class="form-submit-btn form-item">
+              <span class="fas fa-arrow-right"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="js/all.js"></script>
+    <script>
+      document
+        .querySelector(".menu-box")
+        .addEventListener("click", function (e) {
+          this.classList.toggle("active");
+          document.querySelector(".side-nav-box").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

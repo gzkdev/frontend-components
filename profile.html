@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-SemiBold-slnt_1.woff);
+        font-weight: 600;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --color1: #fffddf;
+        --color2: #f28705;
+        --color3: #b82902;
+        --color4: #400d02;
+        --color5: #f21905;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        line-height: 1.5;
+        font-family: Inter, sans-serif;
+        font-family: 1rem;
+        background: #fff;
+        color: var(--color4);
+      }
+
+      .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+      }
+
+      .image {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        height: 100vh;
+      }
+
+      .image-ctn {
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-box {
+        display: inline;
+      }
+
+      .image-file {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 1;
+      }
+
+      .image-content::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: hsl(56, 100%, 104%);
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      .image-content-ctn {
+        width: 90%;
+        max-width: 360px;
+        padding: 24px 24px 72px 24px;
+      }
+
+      .image-content-text {
+        margin: 16px auto 24px auto;
+      }
+
+      .image-content-list {
+        width: 160px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px auto 48px auto;
+      }
+
+      .image-content-link {
+        color: var(--color3);
+        text-decoration: none;
+        font-size: 1.25rem;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .content-ctn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .content-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 48px 16px 0px 16px;
+      }
+
+      .content-box:first-child {
+        padding-top: 24px;
+      }
+
+      .content-box-heading {
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 12px 16px 12px 0;
+        color: var(--color3);
+      }
+
+      .content-main-box {
+        width: 95%;
+        margin-left: auto;
+      }
+
+      .content-link {
+        display: inline-block;
+        width: 90%;
+        max-width: 400px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color3);
+        text-decoration: none;
+        margin: 56px auto;
+        border: 1px solid var(--color3);
+      }
+
+      .content-heading {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .content-heading-md {
+        font-weight: 600;
+        /* font-size: 0.94rem; */
+      }
+
+      .content-mini-box {
+        margin: 8px 0 24px 0;
+      }
+
+      .content-portfolio-link {
+        display: block;
+        text-decoration: none;
+        color: var(--color3);
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: 1100px) {
+        .main {
+          flex-direction: row;
+        }
+
+        .image {
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+          height: 100vh;
+        }
+        .image-content {
+          justify-content: flex-end;
+        }
+
+        .content-box {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .content-box-heading {
+          position: sticky;
+          position: -webkit-sticky;
+          top: 24px;
+          font-size: 0.9rem;
+          padding-left: 8px;
+        }
+
+        .content-main-box {
+          max-width: 540px;
+          padding: 0 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <section class="image">
+        <div class="image-ctn">
+          <div class="image-box">
+            <img
+              src="assets/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+              alt=""
+              class="image-file"
+            />
+          </div>
+          <div class="image-content">
+            <div class="image-content-ctn">
+              <h1 class="image-content-heading">Hi, I'm Ezihe</h1>
+              <p class="image-content-text">
+                A Frontend Software developer and UI designer from Nigeria.
+                Interested in crafting bespoke experiences on the web
+              </p>
+
+              <nav class="image-content-nav">
+                <ul class="image-content-list">
+                  <li class="image-content-item">
+                    <a href="#" class="image-content-link"
+                      ><span class="fab fa-twitter"></span
+                    ></a>
+                  </li>
+                  <li class="image-content-item">
+                    <a href="#" class="image-content-link"
+                      ><span class="fab fa-github"></span
+                    ></a>
+                  </li>
+                  <li class="image-content-item">
+                    <a href="#" class="image-content-link"
+                      ><span class="fab fa-linkedin"></span
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="content-ctn">
+          <div class="content-box">
+            <div class="content-box-heading">Intro</div>
+            <div class="content-main-box">
+              <div class="content-mini-box">
+                I'm currently in my fourth year (out of five) studying computer
+                science and interaction design at Northeastern University.
+              </div>
+              <div class="content-mini-box">
+                I enjoy being the bridge between engineering and design, and
+                feel right at home as a front end engineer. I'm experienced in
+                developing and designing products for the web, from simple
+                landing pages to full-fledged web apps.
+              </div>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-heading">Skills</div>
+            <div class="content-main-box">
+              <div class="content-mini-box">
+                <span class="content-heading">Languages:</span>
+                JavaScript (ES6), HTML5, CSS3, Java, Python
+              </div>
+              <div class="content-mini-box">
+                <span class="content-heading">Libraries & Frameworks:</span>
+                jQuery, Bootstrap, Foundation, Handlebars, Node, Backbone,
+                Marionette, Cordova, MongoDB, Angular, Express, React
+              </div>
+              <div class="content-mini-box">
+                <span class="content-heading">Tools:</span>
+                Git & Github, Command Line, Grunt, Postman, Adobe Photoshop,
+                InDesign
+              </div>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-heading">Education</div>
+            <div class="content-main-box">
+              <div class="content-mini-box">
+                <span class="content-heading-md"
+                  >Nnamdi Azikiwe University</span
+                >
+              </div>
+              <div class="content-mini-box-sm">
+                <span class="content-heading-md">Major:</span>&nbsp;Pharmacy
+              </div>
+              <div class="content-mini-box-sm">
+                <span class="content-heading-md">CGPA:</span>&nbsp;4.67
+              </div>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-heading">Experience</div>
+            <div class="content-main-box"></div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-heading">Projects</div>
+            <div class="content-main-box">
+              <div class="content-mini-box">
+                <a href="#" class="content-portfolio-link"
+                  >brittanychiang.com</a
+                >
+                Portfolio site designed and coded from scratch to showcase my
+                skills and past work
+              </div>
+              <div class="content-mini-box">
+                <a href="#" class="content-portfolio-link">CourseSource</a>
+                Web app built on the MEAN (MongoDB, Express, Angular, Node)
+                stack for my web development class. Created with the intention
+                of providing students a better experience browsing the courses
+                offered at Northeastern
+              </div>
+              <div class="content-mini-box">
+                <a href="#" class="content-portfolio-link">NU Women in Tech</a>
+                Club website redesigned and redeveloped as while serving as web
+                chair on e-board
+              </div>
+              <div class="content-mini-box">
+                <a href="#" class="content-portfolio-link">One Card For All</a>
+                2015 Mullen Lowe U.S. holiday site built around an algorithm
+                that generated a holiday greeting to each and every person on
+                the planet
+              </div>
+            </div>
+          </div>
+          <a href="#" class="content-link">Download My Resume PDF</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/all.js"></script>
+  </body>
+</html>
