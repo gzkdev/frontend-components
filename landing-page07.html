@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <style>
       * {
         padding: 0;
@@ -32,10 +31,10 @@
       }
 
       .ctn {
-        width: 95%;
+        width: 100%;
         max-width: 1140px;
         height: inherit;
-        padding: 0 16px;
+        padding: 0 8px;
         margin: 0 auto;
       }
 
@@ -43,10 +42,10 @@
         position: fixed;
         min-height: 72px;
         width: 100%;
-        background: var(--color1);
+        color: var(--color4);
         display: flex;
         justify-content: center;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 0 2px #bbbb;
       }
 
       .logo-box {
@@ -59,13 +58,13 @@
       }
 
       .nav {
-        flex: 1 auto;
+        display: none;
         height: 100%;
+        align-items: center;
+        justify-content: flex-end;
       }
 
       .nav-list {
-        width: 100%;
-        max-width: 360px;
         height: 100%;
         list-style: none;
         margin-left: auto;
@@ -73,6 +72,10 @@
 
       .nav-item {
         height: 100%;
+      }
+
+      .nav-item:not(:last-child) {
+        margin-right: 48px;
       }
 
       .nav-link,
@@ -84,29 +87,51 @@
         font-size: 0.9rem;
         text-decoration: none;
         color: inherit;
+        transition: 100ms;
       }
 
-      .nav-link::before,
-      .logo::before {
+      .nav-link-cta {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        padding: 8px 24px;
+        border-radius: 32px;
+        border: 1px solid var(--color3);
+        margin-right: 4px;
+      }
+      .menu-box {
+        --size: 48px;
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+      }
+
+      .menu-box::before,
+      .menu-box::after {
         content: "";
         position: absolute;
-        display: block;
-        bottom: 0;
-        left: 0;
-        width: 0%;
+        top: 50%;
+        left: 50%;
+        width: 60%;
         height: 2px;
         background: var(--color3);
-        transform-origin: right;
         transition: 300ms;
       }
 
-      .nav-link:focus {
-        font-weight: bold;
+      .menu-box::before {
+        transform: translate(-50%, -4px);
       }
 
-      .nav-link:focus::before,
-      .logo:focus::before {
-        width: 100%;
+      .menu-box::after {
+        transform: translate(-50%, 4px);
+      }
+
+      .menu-box.active::before {
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+
+      .menu-box.active::after {
+        transform: translate(-50%, 0) rotate(45deg);
       }
 
       .nav-flex {
@@ -124,52 +149,85 @@
       .home {
         width: 100%;
         min-height: 100vh;
-        padding: 160px 24px 64px 24px;
+        padding: 160px 0 64px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(css/IMAGES/watches-pics/jonathan-petit-YSGsMwcGXes-unsplash.jpg)
+            center no-repeat;
+        background-size: cover;
       }
 
       .home-ctn {
         height: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
       }
 
-      .home-box {
-        width: 32%;
-        height: 560px;
-        margin: 24px 0;
-        border: 1px solid var(--color3);
+      .home-text-ctn,
+      .home-img-ctn {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+
+      @media (min-width: 768px) {
+        .ctn {
+          width: 95%;
+          max-width: 1140px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .nav {
+          display: flex;
+        }
+
+        .menu-cta-box {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
     <header class="header">
       <div class="header-ctn nav-flex-btw ctn">
-        <div class="logo-box"><a href="#" class="logo nav-flex">Etmeo</a></div>
+        <div class="logo-box"><a href="#" class="logo nav-flex">floww</a></div>
         <nav class="nav">
           <ul class="nav-list nav-flex-btw">
             <li class="nav-item">
-              <a href="#" class="nav-link nav-flex">About</a>
+              <a href="#" class="nav-link nav-flex">
+                <span class="fab fa-instagram"></span>
+                &nbsp;Instagram</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-flex">Portfolio</a>
+              <a href="#" class="nav-link nav-flex"
+                ><span class="fab fa-twitter"></span>&nbsp;Twitter</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link nav-flex">Contact</a>
+              <a href="#" class="nav-link nav-flex"
+                ><span class="fab fa-linkedin"></span>&nbsp;Linkedin</a
+              >
             </li>
           </ul>
         </nav>
+        <div class="menu-cta-box nav-flex">
+          <!-- <a href="#" class="nav-link-cta">Sign up</a> -->
+          <div class="menu-box"></div>
+        </div>
       </div>
     </header>
 
-    <section class="home">
-      <div class="home-ctn ctn">
-        <div class="home-box"></div>
-        <div class="home-box"></div>
-        <div class="home-box"></div>
-        <div class="home-box"></div>
-      </div>
-    </section>
+    <section class="home"></section>
+
+    <script src="js/all.js"></script>
+    <script>
+      document
+        .querySelector(".menu-box")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
