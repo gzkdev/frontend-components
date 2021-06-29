@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-SemiBold-slnt_1.woff);
+        font-weight: 600;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #080325;
+        --color2: #e05550;
+        --color4: #45104f;
+        --color5: #a82746;
+        --color6: #fcf9f9;
+        --color7: #e0a4a4;
+        --color8: #a16b8b;
+      }
+
+      .ctn {
+        width: 100%;
+        max-width: var(--max-width, 1140px);
+        height: inherit;
+        padding: 8px 8px;
+        margin: 0 auto;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--color4);
+        background: var(--color6);
+      }
+
+      .header {
+        position: fixed;
+        width: 100%;
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        z-index: 1000;
+      }
+
+      .header-ctn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .header-nav-list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+
+      .header-nav-item:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      .header-nav-link {
+        color: var(--color5);
+        text-decoration: none;
+      }
+
+      .logo-box,
+      .menu-box {
+        --size: 64px;
+        width: var(--size);
+        height: var(--size);
+        border: 1px solid var(--color5);
+      }
+
+      .logo-box {
+        margin-right: var(--size);
+      }
+
+      .menu-box {
+        display: flex;
+      }
+
+      .hero-ctn {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 120px;
+      }
+
+      .hero-text-ctn {
+        width: 80%;
+        max-width: 480px;
+        text-align: center;
+      }
+
+      .heading-1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-image-ctn {
+        width: 100%;
+        max-width: 800px;
+        height: 400px;
+        margin-top: 32px;
+        border: 1px solid var(--color1);
+      }
+
+      .actors {
+        padding: 180px 0;
+      }
+
+      .actor-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 80px;
+      }
+
+      .actor-box > * {
+        width: 90%;
+      }
+
+      .actor-box-image-ctn {
+        height: 300px;
+        border: 1px solid var(--color1);
+        margin: 32px 0;
+      }
+
+      @media (min-width: 768px) {
+        .header-ctn {
+          justify-content: center;
+        }
+
+        .menu-box {
+          display: none;
+        }
+
+        .header-nav {
+          display: block;
+        }
+
+        .actor-box {
+          flex-direction: row;
+        }
+
+        .actor-box-text-ctn {
+          width: 45%;
+          max-width: 360px;
+          padding: 16px 16px;
+        }
+
+        .actor-box-image-ctn {
+          width: 45%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="ctn">
+        <div class="header-ctn">
+          <div class="logo-box"></div>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-link">Homer</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-link">Simpson</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-link">Jeffy</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-link">Spooky</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-box"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="ctn">
+        <div class="hero-ctn">
+          <div class="hero-text-ctn">
+            <h1 class="heading-1">Tribute To The Dear Simpsons</h1>
+          </div>
+          <div class="hero-image-ctn"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="actors">
+      <div class="ctn">
+        <div class="actors-ctn">
+          <div class="actor-box">
+            <div class="actor-box-text-ctn">
+              <h3 class="heading-3 actor-box-name">Homer</h3>
+              <p class="actor-box-paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                dolor ratione, repellendus omnis ipsum voluptatum! Velit, libero
+                unde expedita eaque omnis quod corrupti a quisquam odit odio
+                magnam, nulla praesentium?
+              </p>
+            </div>
+            <div class="actor-box-image-ctn"></div>
+          </div>
+
+          <div class="actor-box">
+            <div class="actor-box-image-ctn"></div>
+            <div class="actor-box-text-ctn">
+              <h3 class="heading-3 actor-box-name">Simpson</h3>
+              <p class="actor-box-paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                dolor ratione, repellendus omnis ipsum voluptatum! Velit, libero
+                unde expedita eaque omnis quod corrupti a quisquam odit odio
+                magnam, nulla praesentium?
+              </p>
+            </div>
+          </div>
+
+          <div class="actor-box">
+            <div class="actor-box-text-ctn">
+              <h3 class="heading-3 actor-box-name">Jeffy</h3>
+              <p class="actor-box-paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                dolor ratione, repellendus omnis ipsum voluptatum! Velit, libero
+                unde expedita eaque omnis quod corrupti a quisquam odit odio
+                magnam, nulla praesentium?
+              </p>
+            </div>
+            <div class="actor-box-image-ctn"></div>
+          </div>
+
+          <div class="actor-box">
+            <div class="actor-box-image-ctn"></div>
+            <div class="actor-box-text-ctn">
+              <h3 class="heading-3 actor-box-name">Spooky</h3>
+              <p class="actor-box-paragraph">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+                dolor ratione, repellendus omnis ipsum voluptatum! Velit, libero
+                unde expedita eaque omnis quod corrupti a quisquam odit odio
+                magnam, nulla praesentium?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

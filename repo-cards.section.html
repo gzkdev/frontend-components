@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #080325;
+        --color2: #e05550;
+        --color4: #45104f;
+        --color5: #a82746;
+        --color6: #dce2ff;
+        --color7: #e0a4a4;
+        --color8: #a16b8b;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--color4);
+        background: var(--color6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cards-ctn {
+        width: 90%;
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 400px;
+        min-height: 240px;
+        background: #fff;
+        border: 1px solid var(--color17, #8b8b8b);
+        margin-bottom: 24px;
+        border-radius: 4px;
+      }
+
+      @media (min-width: 728px) {
+        .cards-ctn {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+
+        .card {
+          width: 46%;
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .card {
+          width: 32%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cards-ctn">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </section>
+  </body>
+</html>
