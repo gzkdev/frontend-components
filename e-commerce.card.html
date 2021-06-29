@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-SemiBold-slnt_1.woff);
+        font-weight: 600;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #080325;
+        --color2: #e05550;
+        --color4: #45104f;
+        --color5: #a82746;
+        --color6: #fcf9f9;
+        --color7: #e0a4a4;
+        --color8: #a16b8b;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--color4);
+        background: var(--color6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .store-cards-ctn {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 16px 16px;
+        margin: 0 auto;
+      }
+
+      .card {
+        width: 90%;
+        font-size: 0.9rem;
+        margin: 24px 8px;
+      }
+
+      .card-img-box {
+        width: 100%;
+        height: 220px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-content-box {
+        width: 100%;
+        padding: 16px 4px;
+      }
+
+      .card-content-category,
+      .card-content-price {
+        font-size: 0.8rem;
+      }
+
+      .card-content-heading {
+        font-weight: 600;
+      }
+
+      @media (min-width: 500px) {
+        .card {
+          width: 45%;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .card {
+          width: 30%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .card {
+          width: 30%;
+        }
+        .card-img-box {
+          height: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="store-cards-ctn">
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-box"></div>
+        <div class="card-content-box">
+          <div class="card-content-category">
+            <span>Shoes</span>
+          </div>
+          <div class="card-content-heading">
+            <span>New balance shoe</span>
+          </div>
+          <div class="card-content-price">
+            <span>$240</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

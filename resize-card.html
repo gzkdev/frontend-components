@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts/Inter/Inter-Regular-slnt_2.woff);
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts/Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
       * {
         padding: 0;
         margin: 0;
@@ -13,62 +23,88 @@
       }
 
       :root {
-        --color1: #fafbfb;
-        --color2: hsl(202, 55%, 19%);
-        --color3: hsl(202, 55%, 9%);
-        --color4: hsl(202, 55%, 79%);
-        --color5: hsl(202, 55%, 29%);
+        --color1: #0f245f;
+        --color2: #e94b7a;
+        --color4: #f2f5ef;
+        --color6: #281d4a;
+      }
+
+      ::selection {
+        color: var(--color4);
+        background: var(--color6);
+        text-shadow: none;
       }
 
       body {
         width: 100%;
         min-height: 100vh;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Inter, sans-serif;
+        font-weight: normal;
         display: flex;
+        line-height: 1.5;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background: var(--color4);
+        color: var(--color1);
       }
 
       .card {
-        position: relative;
-        min-width: 200px;
-        max-width: 600px;
-        background: var(--color1);
-        color: var(--color3);
+        min-width: 320px;
+        width: 320px;
+        max-width: 480px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         border-radius: 8px;
+        border: 1px solid var(--color6);
         resize: horizontal;
-        padding: 12px 8px 24px 8px;
         overflow: hidden;
       }
 
       .card-img {
         width: 100%;
         height: 200px;
-        background: var(--color4);
-        margin-bottom: 32px;
-        border-radius: inherit;
+        background: var(--color6);
+        border-radius: 8px 8px 0 0;
+      }
+      .card-content {
+        flex: 1 100%;
+        padding: 24px 8px 48px 8px;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid var(--color6);
       }
 
       .card-category {
-        font-size: 0.8rem;
+        color: var(--color2);
+        font-size: 12px;
       }
-
-      .card-heading {
-        margin: 4px 0 12px;
+      .card-heading-link {
+        display: inline-block;
+        line-height: 1.2;
+        margin: 8px 0 16px 0;
+        text-decoration: none;
+        color: inherit;
       }
     </style>
   </head>
   <body>
     <div class="card">
       <div class="card-img"></div>
-      <small class="card-category">21st April 2021</small>
-      <h3 class="card-heading">A day in the life of a unicorn engineer</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nam
-        dignissimos veniam!
-      </p>
+      <div class="card-content">
+        <small class="card-category">Frontend CSS </small>
+        <h3>
+          <a href="#" class="card-heading-link">
+            Creating resizable cards with with one CSS property</a
+          >
+        </h3>
+        <p>
+          Even without writing a single line of javascript you can still make
+          some things fluid
+        </p>
+      </div>
     </div>
   </body>
 </html>

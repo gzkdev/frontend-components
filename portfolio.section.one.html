@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-SemiBold-slnt_1.woff);
+        font-weight: 600;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #080325;
+        --color2: #e05550;
+        --color4: #45104f;
+        --color5: #a82746;
+        --color6: #fcf9f9;
+        --color7: #e0a4a4;
+        --color8: #a16b8b;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: ClashDisplay, sans-serif;
+        font-weight: bold;
+        line-height: 1.2;
+        color: var(--color8);
+      }
+
+      /* Utility classes */
+      .ctn {
+        width: 100%;
+        max-width: var(--max-width);
+        height: inherit;
+        padding: 12px 16px;
+        margin: 0 auto;
+      }
+
+      .focus-text {
+        color: var(--color1);
+      }
+
+      .section-header {
+        width: 100%;
+        max-width: 480px;
+        margin: 32px auto 48px auto;
+        text-align: center;
+        /* border: 2px solid var(--color5); */
+      }
+
+      .section-heading {
+        font-size: calc(var(--font-size-xmd) + 1rem);
+      }
+
+      .img-box {
+        display: inline;
+      }
+
+      body {
+        width: 100%;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--color4);
+        background: var(--color6);
+      }
+
+      .section {
+        position: relative;
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+      }
+
+      .one {
+        max-width: 1140px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 16px 16px 16px;
+        margin: 0 auto;
+      }
+
+      .one > * {
+        border: 1px solid var(--color8);
+      }
+
+      .one-text {
+        width: 100%;
+        max-width: 480px;
+        min-height: 150px;
+        align-self: flex-start;
+        margin-bottom: 24px;
+      }
+
+      .one-img {
+        width: 100%;
+        max-width: 800px;
+        min-height: 300px;
+        align-self: flex-end;
+      }
+
+      .two {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 16px 16px 16px;
+      }
+
+      .two * {
+        border: 1px solid var(--color2);
+      }
+
+      .two-img {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 440px;
+        margin: 0 auto;
+      }
+
+      .two-img-accent {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, 50%);
+        background: var(--color6);
+      }
+
+      .three {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 140px 16px 100px 16px;
+      }
+
+      .three-ctn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .three-ctn > .box {
+        width: 95%;
+        height: 300px;
+        border: 1px solid var(--color2);
+        margin: 16px 24px;
+      }
+
+      .four {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        padding: 0 16px 100px 16px;
+      }
+
+      .four > .header {
+        display: block;
+        width: 80%;
+        max-width: 400px;
+        height: 140px;
+        border: 1px solid var(--color2);
+        position: sticky;
+        position: -webkit-sticky;
+        top: 100px;
+        margin-bottom: 24px;
+        background: #fff;
+      }
+
+      .four-ctn {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 100vh;
+        flex-direction: column;
+        align-self: flex-end;
+      }
+
+      .four-ctn > .box {
+        width: 100%;
+        max-width: 800px;
+        height: 300px;
+        border: 1px solid var(--color2);
+        margin-bottom: 24px;
+      }
+
+      .four-ctn {
+        align-items: center;
+      }
+
+      .five-ctn {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--color2);
+      }
+
+      .five-box {
+        width: 80%;
+        max-width: 400px;
+        height: 200px;
+        background: #fff;
+        border: 1px solid var(--color2);
+      }
+
+      @media (min-width: 768px) {
+        .one-text {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+        }
+
+        .one-img {
+          height: 480px;
+        }
+        .four {
+          max-width: 1140px;
+        }
+
+        .four-ctn > .box {
+          height: 480px;
+        }
+        .section {
+          min-height: auto;
+        }
+        .three {
+          flex-direction: row;
+        }
+
+        .three-ctn:nth-child(1) {
+          align-items: flex-end;
+        }
+
+        .three-ctn:nth-child(2) {
+          align-items: flex-start;
+        }
+
+        .three .box {
+          max-width: 500px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .section {
+          min-height: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section five">
+      <div class="five-ctn">
+        <div class="five-box"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="one">
+        <div class="one-text"></div>
+        <div class="one-img"></div>
+      </div>
+    </section>
+    <section class="section two">
+      <div class="two-img">
+        <div class="two-img-accent"></div>
+      </div>
+    </section>
+    <section class="section three">
+      <div class="three-ctn">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="three-ctn">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+    <section class="section four">
+      <div class="header"></div>
+      <div class="four-ctn">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+  </body>
+</html>
