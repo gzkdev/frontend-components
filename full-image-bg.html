@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts/Inter/Inter-Regular-slnt_2.woff);
+        font-weight: normal;
+      }
+
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts/Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .ctn {
+        width: 90%;
+        max-width: var(--max-width, 1140px);
+        height: inherit;
+        padding: 8px 8px;
+        margin: 0 auto;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #fff;
+        background: #050505;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .full {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .full-bg {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .full-bg::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.64);
+      }
+
+      .full-bg-ctn {
+        display: inline;
+      }
+
+      .full-bg-image {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 24px;
+      }
+
+      .full-text-box {
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="full">
+      <div class="full-bg">
+        <div class="full-bg-ctn">
+          <img
+            src="css/new-imgs/nasa-Yj1M5riCKk4-unsplash.jpg"
+            alt=""
+            class="full-bg-image"
+          />
+        </div>
+      </div>
+      <div class="full-text-ctn ctn">
+        <div class="full-text-box">
+          <h1>Space Exploration In The Modern Era</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            nulla eos quae, ad expedita asperiores, id distinctio architecto
+            incidunt sed veritatis. Dicta, exercitationem ea?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="full">
+      <div class="full-bg">
+        <div class="full-bg-ctn">
+          <img
+            src="css/new-imgs/olena-sergienko-yvpEi82jzaY-unsplash.jpg"
+            alt=""
+            class="full-bg-image"
+          />
+        </div>
+      </div>
+      <div class="full-text-ctn ctn">
+        <div class="full-text-box">
+          <h1>Space Exploration In The Modern Era</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            nulla eos quae, ad expedita asperiores, id distinctio architecto
+            incidunt sed veritatis. Dicta, exercitationem ea?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="full">
+      <div class="full-bg">
+        <div class="full-bg-ctn">
+          <img
+            src="css/new-imgs/sam-pak-WIeJcQrd3Tw-unsplash.jpg"
+            alt=""
+            class="full-bg-image"
+          />
+        </div>
+      </div>
+      <div class="full-text-ctn ctn">
+        <div class="full-text-box">
+          <h1>Space Exploration In The Modern Era</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            nulla eos quae, ad expedita asperiores, id distinctio architecto
+            incidunt sed veritatis. Dicta, exercitationem ea?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="full">
+      <div class="full-bg">
+        <div class="full-bg-ctn">
+          <img
+            src="css/new-imgs/daniele-colucci--_5dCixJ6FI-unsplash.jpg"
+            alt=""
+            class="full-bg-image"
+          />
+        </div>
+      </div>
+      <div class="full-text-ctn ctn">
+        <div class="full-text-box">
+          <h1>Space Exploration In The Modern Era</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            nulla eos quae, ad expedita asperiores, id distinctio architecto
+            incidunt sed veritatis. Dicta, exercitationem ea?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="full">
+      <div class="full-bg">
+        <div class="full-bg-ctn">
+          <img
+            src="css/new-imgs/luke-peterson-lUMj2Zv5HUE-unsplash.jpg"
+            alt=""
+            class="full-bg-image"
+          />
+        </div>
+      </div>
+      <div class="full-text-ctn ctn">
+        <div class="full-text-box">
+          <h1>Space Exploration In The Modern Era</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            nulla eos quae, ad expedita asperiores, id distinctio architecto
+            incidunt sed veritatis. Dicta, exercitationem ea?
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

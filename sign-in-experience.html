@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Regular-slnt_2.woff);
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-Bold-slnt_1.woff);
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts//Inter/Inter-SemiBold-slnt_1.woff);
+        font-weight: 600;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color1: #080325;
+        --color2: #e05550;
+        --color4: #45104f;
+        --color5: #a82746;
+        --color6: #fcf9f9;
+        --color7: #e0a4a4;
+        --color8: #a16b8b;
+      }
+
+      .ctn {
+        width: 100%;
+        max-width: var(--max-width, 880px);
+        height: inherit;
+        padding: 8px 8px;
+        margin: 0 auto;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: var(--color4);
+        background: var(--color6);
+      }
+
+      .register-ctn {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .register-text-ctn {
+        width: 90%;
+        font-size: 1.2rem;
+        max-width: 320px;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .register-form {
+        width: 90%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 8px;
+        border: 1px solid var(--color8);
+        border-radius: 8px;
+      }
+
+      .form-input-ctn {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+
+      .form-input-box {
+        width: 100%;
+        height: 56px;
+        font-size: 0.9rem;
+        border: 1px solid var(--color8);
+        outline: none;
+        background: none;
+        border-radius: 8px;
+        padding: 0 12px;
+      }
+
+      .form-label {
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .form-input-checkbox {
+        margin-right: 4px;
+      }
+
+      .form-label-checkbox {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .form-submit {
+        width: 100%;
+        height: 56px;
+        border: 1px solid var(--color8);
+        background: var(--color8);
+        outline: none;
+        font-size: 0.9rem;
+        font-family: inherit;
+        color: var(--color6);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        .ctn {
+          width: 90%;
+        }
+
+        .register-ctn {
+          min-height: 60vh;
+          padding-top: 120px;
+          align-items: flex-start;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .register-text-ctn {
+          /* align-self: center; */
+          margin-top: 64px;
+          font-size: 1.64rem;
+          text-align: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="register">
+      <div class="ctn">
+        <div class="register-ctn">
+          <div class="register-text-ctn">
+            <h1 class="heading-1">Sign up to get started.</h1>
+          </div>
+          <form autocomplete="off" class="register-form">
+            <div class="form-input-ctn">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-input-box"
+              />
+            </div>
+            <div class="form-input-ctn">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-input-box"
+              />
+            </div>
+            <div class="form-input-ctn">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+                class="form-input-checkbox"
+              /><label class="form-label-checkbox" for="checkbox"
+                >Remember my password</label
+              >
+            </div>
+            <input class="form-submit" type="submit" value="Submit" />
+            <div class="register-redirect">
+              Already have an account? <a href="#">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

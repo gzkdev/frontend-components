@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @font-face {
+        font-family: Inter;
+        src: url(css/fonts/Inter/Inter-Regular-slnt_2.woff);
+      }
+
       * {
         padding: 0;
         margin: 0;
@@ -17,7 +22,7 @@
         --color2: #e05550;
         --color4: #45104f;
         --color5: #a82746;
-        --color6: #dce2ff;
+        --color6: #fefeff;
         --color7: #e0a4a4;
         --color8: #a16b8b;
       }
@@ -50,11 +55,48 @@
       .card {
         width: 100%;
         max-width: 400px;
-        min-height: 240px;
+        /* min-height: 160px; */
         background: #fff;
         border: 1px solid var(--color17, #8b8b8b);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 18px;
         margin-bottom: 24px;
         border-radius: 4px;
+      }
+
+      .card-repo-name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .card-repo-link {
+        font-size: 1.2rem;
+        color: var(--color8);
+        text-decoration: none;
+      }
+
+      .card-repo-text-ctn {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+
+      .card-repo-stats {
+        /* border: 1px solid var(--color5); */
+        font-size: 0.88rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .card-repo-stats-box:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      .card-repo-stats-box:last-child {
+        margin-left: auto;
+        color: var(--color2);
       }
 
       @media (min-width: 728px) {
@@ -78,12 +120,324 @@
   </head>
   <body>
     <section class="cards-ctn">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+              sint pariatur voluptas explicabo eos delectus aspernatur dicta
+              porro enim, tenetur molestias. Ipsa, hic enim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              sint pariatur voluptas explicabo eos delectus aspernatur dicta
+              porro enim, tenetur molestias. Ipsa, hic enim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+              sint pariatur voluptas Ipsa, hic enim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              Lorem ipsum dolor, sit amet consectenim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details"> </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              Lorem ipsum dolor, sit amet consectetur
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details"
+              >ptas explicabo eos delectus aspernatur dicta porro enim, tenetur
+              molestias. Ipsa, hic enim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div class="card-repo-text-ctn">
+            <span class="card-repo-details">
+              explicabo eos delectus aspernatur dicta porro enim, tenetur
+              molestias. Ipsa, hic enim?
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div class="card">
+        <header class="card-header">
+          <div class="card-repo-name">
+            <a href="#" class="card-repo-link">django-async</a>
+          </div>
+          <div>
+            <span class="card-repo-details">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+              sint pariatur voluptas explicabo eos
+            </span>
+          </div>
+        </header>
+        <footer class="card-footer">
+          <div class="card-repo-stats">
+            <div class="card-repo-stats-box">
+              <span class="far fa-star"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >12</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-code-branch"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >2</span
+              >
+            </div>
+            <div class="card-repo-stats-box">
+              <span class="fas fa-circle"></span>&nbsp;<span
+                class="card-repo-star-count"
+                >Ruby</span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
     </section>
+    <script src="js/all.js"></script>
   </body>
 </html>
