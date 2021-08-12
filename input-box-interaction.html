@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-size: 0.94rem;
+        font-family: Poppins, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #f6f6f6;
+        color: #5112ef;
+      }
+
+      .chat-component {
+        width: 80%;
+        max-width: 240px;
+        min-height: 72px;
+        background: #5112ef;
+        color: #eee7ff;
+        border-radius: 100px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .toggle-icon-box {
+        --size: 48px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #7f4dff;
+        border-radius: 50%;
+        cursor: pointer;
+        transform-origin: 50% 50%;
+        transition: transform 200ms;
+      }
+
+      .toggle-icon-box.active {
+        transform: rotate(-45deg);
+      }
+
+      .toggle-box {
+        position: relative;
+        width: calc(100% - 64px);
+        height: 48px;
+        overflow: hidden;
+      }
+
+      .form,
+      .toggle-nav {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: transform 300ms;
+        transform-origin: top left;
+      }
+
+      .toggle-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(100%) skewY(48deg);
+      }
+
+      .toggle-nav a {
+        --size: 40px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #7f4dff;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #eee7ff;
+        font-size: 1rem;
+      }
+
+      .form.active {
+        transform: translateY(-200%) skewY(-48deg);
+      }
+
+      .toggle-nav.active {
+        transform: translateY(-100%) skewY(0deg);
+      }
+
+      .form-input-box {
+        width: 100%;
+        font-size: 0.8rem;
+        font-family: inherit;
+        height: 100%;
+        padding: 0 16px;
+        border-radius: 100px;
+        border: none;
+        outline: none;
+        background: #7f4dff;
+        color: #eee7ff;
+      }
+
+      .form-input-box::placeholder {
+        color: #eee7ff;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-component">
+      <div class="toggle-icon-box">
+        <span class="fas fa-plus"></span>
+      </div>
+      <div class="toggle-box">
+        <form class="form">
+          <input type="text" placeholder="Message" class="form-input-box" />
+        </form>
+        <nav class="toggle-nav">
+          <a href="#"><span class="fas fa-video"></span></a>
+          <a href="#"><span class="fas fa-camera"></span></a>
+          <a href="#"><span class="fas fa-image"></span></a>
+        </nav>
+      </div>
+    </div>
+    <script src="js/all.js"></script>
+    <script>
+      const toggleButton = document.querySelector(".toggle-icon-box");
+      const toggleForm = document.querySelector(".form");
+      const toggleNav = document.querySelector(".toggle-nav");
+
+      toggleButton.addEventListener("click", function () {
+        this.classList.toggle("active");
+        toggleForm.classList.toggle("active");
+        toggleNav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

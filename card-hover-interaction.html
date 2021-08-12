@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #f6f6f6;
+        color: #333;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 400px;
+        /* min-height: 300px; */
+        aspect-ratio: 2/1;
+        background: #fff;
+        margin: 64px auto 8px auto;
+        transition: 300ms;
+        cursor: pointer;
+      }
+
+      .card:last-of-type {
+        margin-bottom: 80px;
+      }
+
+      .card:nth-child(1):hover {
+        box-shadow: 4px 4px 0 2px #5112ef, 8px 8px 0 2px #09ec60,
+          12px 12px 0 2px #d07;
+      }
+
+      .card:nth-child(2):hover {
+        box-shadow: 0px 12px 0 -4px #5112ef, 0px 24px 0 -8px #09ec60,
+          0px 36px 0 -12px #d07;
+      }
+
+      .mockup-marquee {
+        width: 100%;
+        overflow: hidden;
+        margin: 80px 0;
+        /* border: 1px solid #444; */
+      }
+      .mockup-marquee-ctn {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        overflow-x: hidden;
+        /* border: 1px solid rgb(28, 61, 209); */
+      }
+
+      .mockup-marquee-card {
+        /* display: inline-block; */
+        min-width: 300px;
+        max-width: 300px;
+        height: 280px;
+        background: #fff;
+        border-radius: 4px;
+      }
+
+      .mockup-marquee-card:not(:nth-child(1)) {
+        margin-left: 24px;
+      }
+
+      .mockup-marquee-card:last-child {
+        margin-right: 24px;
+      }
+
+      /* .mockup-marquee-card:nth-child(1) {
+        margin-left: 38px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="mockup-marquee">
+      <div class="mockup-marquee-ctn">
+        <div class="mockup-marquee-card"></div>
+        <div class="mockup-marquee-card"></div>
+        <div class="mockup-marquee-card"></div>
+        <div class="mockup-marquee-card"></div>
+        <div class="mockup-marquee-card"></div>
+        <div class="mockup-marquee-card"></div>
+      </div>
+    </div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </body>
+</html>
