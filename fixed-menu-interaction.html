@@ -63,7 +63,7 @@
         align-items: center;
         justify-content: center;
         color: #5112ef;
-        transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) var(--delay);
+        transition: var(--duration);
         opacity: 0;
         visibility: hidden;
         cursor: pointer;
@@ -78,17 +78,26 @@
   </head>
   <body>
     <nav class="fixed-nav">
-      <div style="--y: -48px; --x: -108px; --delay: 0ms" class="fixed-nav-item">
+      <div
+        style="--y: -48px; --x: -108px; --delay: 60ms"
+        class="fixed-nav-item"
+      >
         <span class="fas fa-graduation-cap"></span>
       </div>
-      <div style="--y: -80px; --x: -40px; --delay: 60ms" class="fixed-nav-item">
+      <div
+        style="--y: -80px; --x: -40px; --duration: 120ms"
+        class="fixed-nav-item"
+      >
         <span class="fas fa-chart-pie"></span>
       </div>
-      <div style="--y: -80px; --x: 40px; --delay: 120ms" class="fixed-nav-item">
+      <div
+        style="--y: -80px; --x: 40px; --duration: 180ms"
+        class="fixed-nav-item"
+      >
         <span class="fas fa-bell"></span>
       </div>
       <div
-        style="--y: -48px; --x: 108px; --delay: 180ms"
+        style="--y: -48px; --x: 108px; --duration: 240ms"
         class="fixed-nav-item"
       >
         <span class="fas fa-envelope"></span>
