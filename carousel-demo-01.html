@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 100%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        width: 100%;
+        font-family: sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        margin: 30vh 0 0 auto;
+        display: flex;
+        overflow: hidden;
+        transition: 300ms;
+        padding-left: 100px;
+      }
+
+      .carousel.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(0.98);
+      }
+
+      .carousel-pointer {
+        position: absolute;
+        display: none;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ffbac0;
+        color: #333;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: 200ms;
+        z-index: 10;
+      }
+
+      .carousel-pointer.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item {
+        flex: 1 0 auto;
+        width: 240px;
+        min-height: 280px;
+        margin-inline: 24px;
+        background: #ffbac0;
+        transition: 200ms;
+      }
+
+      .item:hover,
+      .item:focus {
+        transform: scale(1.02);
+      }
+
+      .item:nth-child(2n) {
+        background: #8ad6f5;
+      }
+
+      .item:nth-child(3n) {
+        background: #ff7aed;
+      }
+
+      .item:nth-child(4n) {
+        background: #acf58a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-pointer">DRAG ME</div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const carouselPointer = document.querySelector(".carousel-pointer");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener("mousedown", (e) => {
+        isDown = true;
+        carousel.classList.add("active");
+        carouselPointer.classList.add("active");
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener("mouseleave", () => {
+        isDown = false;
+        carousel.classList.remove("active");
+        carouselPointer.classList.remove("active");
+      });
+
+      carousel.addEventListener("mouseup", () => {
+        isDown = false;
+        carousel.classList.remove("active");
+        carouselPointer.classList.remove("active");
+      });
+
+      carousel.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        let x = e.pageX - carousel.offsetLeft;
+        let move = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - move;
+      });
+    </script>
+  </body>
+</html>

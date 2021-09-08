@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Urbanist;
+        src: url(css/fonts/Urbanist-SemiBold.ttf);
+      }
+      @font-face {
+        font-family: Stardom;
+        src: url(css/fonts/Stardom-Regular.woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5;
+        color: #555a61;
+        font-size: 1.125rem;
+        font-family: Urbanist, sans-serif;
+      }
+
+      h1 {
+        /* font-family: Stardom, serif; */
+        font-size: 3rem;
+        line-height: 1.25;
+        color: transparent;
+        background-size: 100%;
+        background-image: linear-gradient(
+          120deg,
+          #f4faf7,
+          rgba(92, 92, 255, 0.678),
+          blueviolet,
+          orangered,
+          red,
+          yellow
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        /* -webkit-text-stroke: 1px #000; */
+        background-position: 40%;
+        width: 90%;
+        margin-bottom: 40px;
+      }
+
+      .ctn {
+        width: 90%;
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
+      p {
+        width: 90%;
+        max-width: 560px;
+      }
+
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ctn">
+      <h1>Design. Code. Engage.</h1>
+      <p>
+        Hi there! I'm Ezihe Godswill, an experienced front-end software engineer
+        proficient in bringing forth expertise in design, prototyping, testing
+        and maintenance of front-end web systems. Knowledgeable in user
+        interface, testing, and debugging processes. Equipped with a diverse and
+        promising skill-set.
+      </p>
+    </div>
+  </body>
+</html>
